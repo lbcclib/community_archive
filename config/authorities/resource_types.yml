@@ -5,24 +5,24 @@ terms:
     term: Audio
   - id: Book
     term: Book
-  - id: Capstone Project
-    term: Capstone Project
-  - id: Conference Proceeding
-    term: Conference Proceeding
+  - id: Brochure
+    term: Brochure
+  - id: Conference proceeding
+    term: Conference proceeding
+  - id: College document
+    term: College document
   - id: Dataset
     term: Dataset
-  - id: Dissertation
-    term: Dissertation
   - id: Image
     term: Image
-  - id: Journal
-    term: Journal
-  - id: Map or Cartographic Material
-    term: Map or Cartographic Material
-  - id: Masters Thesis
-    term: Masters Thesis
-  - id: Part of Book
-    term: Part of Book
+  - id: Learning object
+    term: Learning object
+  - id: Map
+    term: Map
+  - id: Newspaper
+    term: Newspaper
+  - id: Part of book
+    term: Part of book
   - id: Poster
     term: Poster
   - id: Presentation
@@ -31,10 +31,10 @@ terms:
     term: Project
   - id: Report
     term: Report
-  - id: Research Paper
-    term: Research Paper
-  - id: Software or Program Code
-    term: Software or Program Code
+  - id: Research paper
+    term: Research paper
+  - id: Software
+    term: Software
   - id: Video
     term: Video
   - id: Other
