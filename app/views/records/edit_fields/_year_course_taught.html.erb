@@ -1,0 +1,3 @@
+<%= f.input :year_course_taught, as: :integer, required: f.object.required?(key),
+  input_html: { class: 'form-control', multiple: false, pattern: '[12][0-9]{3}' }
+%>
