@@ -1,24 +1,21 @@
-# README
+# community_archive
+LBCC's institutional repository
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To install:
 
-Things you may want to cover:
+    $ rails new hyrax --database=postgresql
 
-* Ruby version
+Add to Gemfile:
 
-* System dependencies
+    gem 'therubyracer'
+    gem 'hyrax', git: 'https://github.com/projecthydra-labs/hyrax.git'
 
-* Configuration
+    $ bundle install
+    $ rails generate hyrax:install -f
+    $ rails generate hyrax:work Syllabus
+    $ rails generate hyrax:work NewspaperIssue
 
-* Database creation
+pull this stuff in using git
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    $ rake db:migrate
+    $ rake hyrax:workflow:load
