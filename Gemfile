@@ -5,8 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-gem 'hyrax', git: 'http://github.com/samvera/hyrax.git'
+gem 'hyrax', git: 'https://github.com/samvera/hyrax.git'
 gem 'clamav'
 gem 'hydra-derivatives', '3.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
