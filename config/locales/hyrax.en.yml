@@ -43,6 +43,9 @@ en:
           subject_tesim: Subject
           title_tesim: Title
   hyrax:
+    base:
+      form_files:
+        local_upload: Upload your files
     product_name:           "CommunityArchive@LBCC"
     product_twitter_handle: "@HydraSphere"
     institution_name:       "LBCC"

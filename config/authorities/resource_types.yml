@@ -35,6 +35,8 @@ terms:
     term: Research paper
   - id: Software
     term: Software
+  - id: Syllabus
+    term: Syllabus
   - id: Video
     term: Video
   - id: Other

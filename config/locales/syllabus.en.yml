@@ -5,4 +5,18 @@ en:
     select_type:
       syllabus:
         name:               "Syllabus"
-        description:        "Syllabus works"
+        description:        "Syllabi to be archived"
+        hints:
+          default:
+            title: '123'
+  simple_form:
+    labels:
+      syllabus:
+        title: Course prefix and number
+        creator: Instructor
+        crn: CRN
+    hints:
+      syllabus:
+        title: Please include a space between the prefix and number (e.g. ANTH 103)
+        creator: The person teaching the class
+        year_course_taught: e.g. 2017
