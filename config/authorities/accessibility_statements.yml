@@ -1,0 +1,9 @@
+terms:
+  - id: accessible
+    term: Accessible
+  - id: universally-designed
+    term: Accessible and universally designed
+  - id: not-accessible
+    term: Not accessible
+  - id: not-evaluated
+    term: Accessibility not yet evaluated
