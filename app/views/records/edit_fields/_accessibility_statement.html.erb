@@ -1,0 +1,6 @@
+<%= f.input :accessibility_statement,
+  collection: AccessibilityStatementsService.select_all_options,
+  include_blank: true,
+  input_html: { class: 'form-control' }
+%>
+

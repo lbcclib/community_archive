@@ -10,6 +10,9 @@ class Syllabus < ActiveFedora::Base
 
   self.human_readable_type = 'Syllabus'
 
+  property :accessibility_statement, predicate: ::RDF::URI('http://purl.org/dc/terms/description'), multiple: false do |index|
+    index.as :stored_searchable, :facetable
+  end
   property :crn, predicate: ::RDF::URI('http://purl.org/dc/terms/references'), multiple: true do |index|
     index.as :stored_searchable, :facetable
   end
