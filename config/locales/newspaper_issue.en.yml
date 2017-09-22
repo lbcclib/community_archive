@@ -4,5 +4,14 @@ en:
       newspaper_issue:     'fa fa-file-text-o'
     select_type:
       newspaper_issue:
-        name:               "Newspaper Issue"
-        description:        "Newspaper issue works"
+        name: "Newspaper issue"
+        description:   "Individual issues of newspapers"
+  simple_form:
+    labels:
+      newspaper_issue:
+        title: Newspaper name and date
+        date_created: Issue date
+    hints:
+      newspaper_issue:
+        keyword: Subjects, people, or concepts described in the issue.  These are used to help users search for this issue.
+        title: e.g. Commuter - Sept. 12, 2017

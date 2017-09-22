@@ -15,6 +15,12 @@ class NewspaperIssue < ActiveFedora::Base
     index.as :stored_searchable
   end
 
+  property :volume, predicate: ::RDF::URI('http://purl.org/dc/terms/description'), multiple: false do |index|
+    index.as :stored_searchable
+  end
+  property :edition, predicate: ::RDF::URI('http://purl.org/dc/terms/description'), multiple: false do |index|
+    index.as :stored_searchable
+  end
 
   # This must be included at the end, because it finalizes the metadata
   # schema (by adding accepts_nested_attributes)

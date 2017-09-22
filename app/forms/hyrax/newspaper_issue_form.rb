@@ -3,9 +3,9 @@
 module Hyrax
   class NewspaperIssueForm < Hyrax::Forms::WorkForm
     self.model_class = ::NewspaperIssue
-    self.required_fields += [:contributor_list, :date_created]
+    self.required_fields += [:contributor_list, :date_created, :volume, :edition]
     self.required_fields -= [:creator, :rights_statement]
-    self.terms += [:contributor_list]
-    self.terms -= [:abstract, :creator, :contributor, :description, :identifier, :source, :subject, :publisher, :related_url]
+    self.terms += [:contributor_list, :volume, :edition]
+    self.terms -= [:abstract, :creator, :contributor, :description, :identifier, :license, :source, :subject, :publisher, :related_url]
   end
 end
