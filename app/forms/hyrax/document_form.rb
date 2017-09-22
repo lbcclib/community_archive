@@ -3,7 +3,7 @@
 module Hyrax
   class DocumentForm < Hyrax::Forms::WorkForm
     self.model_class = ::Document
-    self.terms += [:resource_type]
+    self.terms += [:resource_type, :accessibility_statement]
     self.terms -= [:source]
   end
 end
