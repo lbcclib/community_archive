@@ -10,7 +10,7 @@ en:
     labels:
       newspaper_issue:
         title: Newspaper name and date
-        date_created: Issue date
+        date_created: Publication year
     hints:
       newspaper_issue:
         keyword: Subjects, people, or concepts described in the issue.  These are used to help users search for this issue.
