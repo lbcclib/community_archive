@@ -5,4 +5,4 @@ en:
     select_type:
       document:
         name:               "Document"
-        description:        "Document works"
+        description:        "Any document"
