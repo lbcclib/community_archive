@@ -15,10 +15,10 @@ class NewspaperIssue < ActiveFedora::Base
     index.as :stored_searchable
   end
 
-  property :volume, predicate: ::RDF::URI('http://purl.org/dc/terms/description'), multiple: false do |index|
+  property :volume, predicate: ::RDF::URI('http://purl.org/net/nknouf/ns/bibtex#hasVolume'), multiple: false do |index|
     index.as :stored_searchable
   end
-  property :edition, predicate: ::RDF::URI('http://purl.org/dc/terms/description'), multiple: false do |index|
+  property :edition, predicate: ::RDF::URI('http://purl.org/net/nknouf/ns/bibtex#hasNumber'), multiple: false do |index|
     index.as :stored_searchable
   end
 

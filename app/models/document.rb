@@ -10,6 +10,11 @@ class Document < ActiveFedora::Base
 
   self.human_readable_type = 'Document'
 
+  property :accessibility_statement, predicate: ::RDF::URI('http://purl.org/dc/terms/description'), multiple: false do |index|
+    index.as :stored_searchable, :facetable
+  end
+
+
   # This must be included at the end, because it finalizes the metadata
   # schema (by adding accepts_nested_attributes)
   include ::Hyrax::BasicMetadata
