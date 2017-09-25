@@ -11,7 +11,7 @@ matrix:
       env: "RAILS_VERSION=5.1.2"
 
 before_install:
-  - psql -c 'create database community_archive_test;' -U postgres
+  - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
   - sudo apt-get install clamav libclamav-dev
   - gem install -v $RAILS_VERSION rails
