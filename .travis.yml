@@ -2,12 +2,16 @@ language: ruby
 dist: trusty
 sudo: required
 
+services:
+  - postgresql
+
 matrix:
   include:
     - rvm: 2.3.3
       env: "RAILS_VERSION=5.1.2"
 
 before_install:
+  - psql -c 'create database community_archive_test;' -U postgres
   - sudo apt-get install clamav libclamav-dev
   - gem install -v $RAILS_VERSION rails
   - bundle install
