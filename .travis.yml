@@ -1,0 +1,19 @@
+language: ruby
+dist: trusty
+sudo: required
+
+matrix:
+  include:
+    - rvm: 2.3.3
+      env: "RAILS_VERSION=5.1.2"
+
+before_install:
+- gem install -v $RAILS_VERSION rails
+- bundle install
+- bundle exec rails new --database=postgresql --skip .
+- rails generate hyrax:install --skip
+- rake db:migrate
+- rails generate hyrax:work Syllabus --skip
+- rails generate hyrax:work NewspaperIssue --skip
+- rake db:migrate
+- rake hyrax:workflow:load
