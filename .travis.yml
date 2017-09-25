@@ -12,12 +12,19 @@ matrix:
 
 before_install:
   - psql -c 'create database community_archive_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
   - sudo apt-get install clamav libclamav-dev
   - gem install -v $RAILS_VERSION rails
   - bundle install
   - bundle exec rails new --database=postgresql --skip .
   - rails generate blacklight:install --devise --skip
   - rails generate hydra-head --skip
+  - rails generate hyrax:config --skip
+  - rails generate mailboxer:install --skip
+  - rails generate qa:local:tables --skip
+  - rails generate hyrax:assets --skip
+  - rails generate blacklight_gallery:install --skip
+  - rails generate active_fedora:noid:install --skip
   - rails generate hyrax:models:install --skip
   - rake db:migrate
   - rails generate hyrax:work Syllabus --skip
