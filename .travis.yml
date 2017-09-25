@@ -8,7 +8,7 @@ matrix:
       env: "RAILS_VERSION=5.1.2"
 
 before_install:
-  - sudo apt-get install libclamav-dev
+  - sudo apt-get install clamav libclamav-dev
   - gem install -v $RAILS_VERSION rails
   - bundle install
   - bundle exec rails new --database=postgresql --skip .
