@@ -2,5 +2,6 @@
 #  `rails generate hyrax:work Syllabus`
 module Hyrax
   class SyllabusPresenter < Hyrax::WorkShowPresenter
+    delegate :course_number, :year_course_taught, to: :solr_document
   end
 end

@@ -1,8 +1,8 @@
 # Generated via
-#  `rails generate hyrax:work Syllabus`
+#  `rails generate hyrax:work NewspaperIssue`
 
 module Hyrax
-  class SyllabusesController < ApplicationController
+  class SyllabiController < ApplicationController
     # Adds Hyrax behaviors to the controller.
     include Hyrax::WorksControllerBehavior
     include Hyrax::BreadcrumbsForWorks

@@ -23,13 +23,16 @@ Hyrax.config do |config|
   # config.admin_set_predicate = ::RDF::DC.isPartOf
 
   # Email recipient of messages sent via the contact form
-  # config.contact_email = "repo-admin@example.org"
+  config.contact_email = 'sandbej@linnbenton.edu'
 
   # Text prefacing the subject entered in the contact form
   # config.subject_prefix = "Contact form:"
 
   # How many notifications should be displayed on the dashboard
   # config.max_notifications_for_dashboard = 5
+
+  # How often clients should poll for notifications
+  # config.notifications_update_poll_interval = 30.seconds
 
   # How frequently should a file be fixity checked
   # config.max_days_between_fixity_checks = 7
@@ -84,7 +87,7 @@ Hyrax.config do |config|
   # config.redis_namespace = "hyrax"
 
   # Path to the file characterization tool
-  # config.fits_path = "fits.sh"
+  config.fits_path = "/home/libwebadmin/Fits/fits-1.0.5/fits.sh"
 
   # Path to the file derivatives creation tool
   # config.libreoffice_path = "soffice"
@@ -100,12 +103,9 @@ Hyrax.config do |config|
   # of Zotero-managed research items.
   # config.arkivo_api = false
 
-  # Stream realtime notifications to users in the browser
-  # config.realtime_notifications = true
-
   # Location autocomplete uses geonames to search for named regions
   # Username for connecting to geonames
-  # config.geonames_username = ''
+  config.geonames_username = 'lbcclib'
 
   # Should the acceptance of the licence agreement be active (checkbox), or
   # implied when the save button is pressed? Set to true for active
