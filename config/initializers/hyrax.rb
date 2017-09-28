@@ -3,6 +3,8 @@ Hyrax.config do |config|
   config.register_curation_concern :syllabus
   # Injected via `rails g hyrax:work NewspaperIssue`
   config.register_curation_concern :newspaper_issue
+  # Injected via `rails g hyrax:work Document`
+  config.register_curation_concern :document
   # Register roles that are expected by your implementation.
   # @see Hyrax::RoleRegistry for additional details.
   # @note there are magical roles as defined in Hyrax::RoleRegistry::MAGIC_ROLES
