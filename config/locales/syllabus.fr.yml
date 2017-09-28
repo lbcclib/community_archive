@@ -1,0 +1,8 @@
+fr:
+  hyrax:
+    icons:
+      syllabus:     'fa fa-file-text-o'
+    select_type:
+      syllabus:
+        name:               "Syllabus"
+        description:        "Syllabus œuvres"

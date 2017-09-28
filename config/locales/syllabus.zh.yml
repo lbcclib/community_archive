@@ -1,0 +1,10 @@
+zh:
+  hyrax:
+    icons:
+      syllabus:     'fa fa-file-text-o'
+    select_type:
+      syllabus:
+        # TODO: translate `human_name` into Chinese
+        name:               "Syllabus"
+        # TODO: translate `human_name` into Chinese
+        description:        "Syllabus 作品"

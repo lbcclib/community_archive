@@ -1,0 +1,10 @@
+es:
+  hyrax:
+    icons:
+      syllabus:     'fa fa-file-text-o'
+    select_type:
+      syllabus:
+        # TODO: translate `human_name` into Spanish
+        name:               "Syllabus"
+        # TODO: translate `human_name` into Spanish
+        description:        "Syllabus trabajos"
