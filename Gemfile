@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails'
 gem 'syslogger', '~> 1.6.0'
 gem 'lograge','~> 0.3.1'
-
+gem 'sentry-raven'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
