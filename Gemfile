@@ -33,7 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development, require: false
+gem 'capistrano-systemd', group: :development, require: false
 gem 'dotenv-rails'
 gem 'syslogger', '~> 1.6.0'
 gem 'lograge','~> 0.3.1'

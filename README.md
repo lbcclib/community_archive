@@ -25,3 +25,10 @@ Then run these commands:
     $ rake hyrax:workflow:load
 
 If you'd like to start it, run `rake hydra:server`
+
+
+## Deploy
+cap (beta|production) deploy 
+
+## Rollback
+cap (beta|production) rollback
