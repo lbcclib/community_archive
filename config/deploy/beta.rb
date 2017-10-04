@@ -4,7 +4,7 @@ set :systemd_unit, "hyrax-beta.service"
 set :systemd_use_sudo, true
 set :systemd_roles, %w(app)
 
-
+set :rails_env, 'beta'
 set :deploy_to, "/var/www/hyrax-beta"
 
 # Configuration
