@@ -5,6 +5,8 @@ class User < ApplicationRecord
   include Hyrax::User
   include Hyrax::UserUsageStats
 
+  validates :email, format: { with: /.*linnbenton.edu/, message: 'has to end with linnbenton.edu' }
+
 
 
   if Blacklight::Utils.needs_attr_accessible?
@@ -23,4 +25,5 @@ class User < ApplicationRecord
   def to_s
     email
   end
+
 end
