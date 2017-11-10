@@ -15,3 +15,6 @@ en:
       newspaper_issue:
         keyword: Subjects, people, or concepts described in the issue.  These are used to help users search for this issue.
         title: e.g. Commuter - Sept. 12, 2017
+        date_created: The year during which the newspaper issue was published.
+        volume: Just the volume number is fine (e.g. 17)
+        edition: Just the edition number is fine (e.g. 5)
