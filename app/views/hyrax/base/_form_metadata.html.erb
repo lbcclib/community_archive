@@ -26,11 +26,15 @@
 	<%= link_to t('hyrax.works.form.next_page').html_safe + ' ' + content_tag(:span, '', class: 'fa fa-forward'),
                       '#files',
                       class: 'btn btn-success',
-		      role: "button" %>
+		      'data-toggle' => 'tab',
+		      onclick: "$('.nav-tabs li a[href=\"#files\"]').parent().tab('show');",
+		      role: 'button' %>
 </div>
         <% else %>
 	<%= link_to t('hyrax.works.form.next_page').html_safe + ' ' + content_tag(:span, '', class: 'fa fa-forward'),
                       '#files',
                       class: 'btn btn-success',
+		      'data-toggle' => 'tab',
+		      onclick: "$('.nav-tabs li a[href=\"#files\"]').parent().tab('show');",
 		      role: "button" %>
         <% end %>
