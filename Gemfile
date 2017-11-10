@@ -5,9 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hyrax', git: 'https://github.com/samvera/hyrax.git'
+gem 'hyrax', '~> 2.0'
 gem 'clamav'
-gem 'hydra-derivatives', '3.3.1'
+#gem 'hydra-derivatives', '~> 3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use postgresql as the database for Active Record
