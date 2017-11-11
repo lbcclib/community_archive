@@ -1,6 +1,8 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
+require "bundler/capistrano"
+
 set :application, "hyrax"
 set :repo_url, "https://github.com/lbcclib/community_archive.git"
 
@@ -35,11 +37,3 @@ append :linked_dirs, "log", "public/assets", "public/system", "tmp/pids", "tmp/c
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-namespace :bundle do
-  desc "run bundle install and ensure all gem requirements are met"
-  task :install do
-    run "cd #{current_path} && bundle install  --without=test --no-update-sources"
-  end
-end
-
-before "deploy:restart", "bundle:install"
