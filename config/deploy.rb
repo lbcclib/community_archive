@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
-require "bundler/capistrano"
+#require "bundler/capistrano"
 
 set :application, "hyrax"
 set :repo_url, "https://github.com/lbcclib/community_archive.git"
