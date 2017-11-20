@@ -38,7 +38,7 @@ gem 'capistrano-rails', group: :development, require: false
 gem 'capistrano-systemd', group: :development, require: false
 gem 'capistrano-bundler', '~> 1.3'
 gem 'dotenv-rails'
-gem 'syslogger', '~> 1.6.0'
+gem 'syslogger', github: 'crohr/syslogger', branch: 'fix_formatter'
 gem 'lograge','~> 0.3.1'
 gem 'sentry-raven'
 group :development, :test do

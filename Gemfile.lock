@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/crohr/syslogger.git
+  revision: eb7df0b811fd26843e99b2e5e85b52a737d4e379
+  branch: fix_formatter
+  specs:
+    syslogger (1.6.4)
+
+GIT
   remote: https://github.com/notch8/bundler-audit.git
   revision: ca43a227b73e24b0e59fcae050aa4165f39b5334
   specs:
@@ -735,7 +742,6 @@ GEM
     stomp (1.4.4)
     sxp (1.0.0)
       rdf (~> 2.0)
-    syslogger (1.6.4)
     temple (0.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -806,7 +812,7 @@ DEPENDENCIES
   solr_wrapper (>= 0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
-  syslogger (~> 1.6.0)
+  syslogger!
   therubyracer
   turbolinks (~> 5)
   tzinfo-data
