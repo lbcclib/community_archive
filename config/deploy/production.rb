@@ -5,7 +5,7 @@
 
 server "libarchive.linnbenton.edu", user: "notch8", roles: %w{app db web}
 
-set :systemd_unit, "community_archive.service"
+set :systemd_unit, "communityarchive.service"
 set :systemd_use_sudo, true
 set :systemd_roles, %w(app)
 
