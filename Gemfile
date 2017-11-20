@@ -36,6 +36,7 @@ gem 'sidekiq'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development, require: false
 gem 'capistrano-systemd', group: :development, require: false
+gem 'capistrano-bundler', '~> 1.3'
 gem 'dotenv-rails'
 gem 'syslogger', '~> 1.6.0'
 gem 'lograge','~> 0.3.1'
