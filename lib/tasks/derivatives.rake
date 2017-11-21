@@ -15,6 +15,7 @@ namespace :derivatives do
           			Rails.logger.debug("Regenerating derivatives for FileSet #{member.id} in the background")
           			puts "Queueing (#{member.id})"
           			CharacterizeJob.perform_later(member, member.original_file.id, path_hint)
+				sleep(40)
 			end
 		end
 	end
