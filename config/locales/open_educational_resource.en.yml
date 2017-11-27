@@ -1,0 +1,17 @@
+en:
+  hyrax:
+    icons:
+      open_educational_resource:     'fa fa-graduation-cap'
+    select_type:
+      open_educational_resource:
+        name:               "Open Educational Resource"
+        description:        "Learning objects released under open licenses"
+  simple_form:
+    labels:
+      syllabus:
+        crn: CRN
+        year_course_taught: Year that this resource was first used
+    hints:
+      syllabus:
+        year_course_taught: e.g. 2017
+

@@ -5,6 +5,8 @@ Hyrax.config do |config|
   config.register_curation_concern :newspaper_issue
   # Injected via `rails g hyrax:work Document`
   config.register_curation_concern :document
+  # Injected via `rails g hyrax:work OpenEducationalResource`
+  config.register_curation_concern :open_educational_resource
   # Register roles that are expected by your implementation.
   # @see Hyrax::RoleRegistry for additional details.
   # @note there are magical roles as defined in Hyrax::RoleRegistry::MAGIC_ROLES

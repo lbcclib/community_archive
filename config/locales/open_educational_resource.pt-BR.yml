@@ -1,0 +1,8 @@
+pt-BR:
+  hyrax:
+    icons:
+      open_educational_resource:     'fa fa-file-text-o'
+    select_type:
+      open_educational_resource:
+        name:               "Open Educational Resource"
+        description:        "Open educational resource trabalhos"
