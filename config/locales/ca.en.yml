@@ -1,5 +1,13 @@
 en:
   hyrax:
+    content_blocks:
+      tabs:
+        featured_researcher: 'Featured creator'
+    homepage:
+      featured_researcher:
+        missing: There is no featured creator yet
+        tab_label: Featured creator
+        title: Featured creator
     works:
       form:
         next_page: 'Next tab'

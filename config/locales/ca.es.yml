@@ -1,5 +1,13 @@
 es:
   hyrax:
+    content_blocks:
+      tabs:
+        featured_researcher: Autor destacado
+    homepage:
+      featured_researcher:
+        missing: Ya no hay autores detacados
+        tab_label: Autor destacado
+        title: Autor destacado
     works:
       form:
         next_page: Siguinte
