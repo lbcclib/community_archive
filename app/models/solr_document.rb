@@ -26,10 +26,19 @@ class SolrDocument
 
   use_extension( Hydra::ContentNegotiation )
 
-  def course_number
-    self[Solrizer.solr_name('course_number')]
+  def crn
+    self[Solrizer.solr_name('crn')]
   end
   def year_course_taught
     self[Solrizer.solr_name('year_course_taught')]
+  end
+  def edition
+    self[Solrizer.solr_name('edition')]
+  end
+  def volume
+    self[Solrizer.solr_name('volume')]
+  end
+  def contributor_list
+    self[Solrizer.solr_name('contributor_list')]
   end
 end
