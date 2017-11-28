@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/crohr/syslogger.git
+  revision: eb7df0b811fd26843e99b2e5e85b52a737d4e379
+  branch: fix_formatter
+  specs:
+    syslogger (1.6.4)
+
+GIT
   remote: https://github.com/notch8/bundler-audit.git
   revision: ca43a227b73e24b0e59fcae050aa4165f39b5334
   specs:
@@ -178,6 +185,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     daemons (1.2.5)
     declarative (0.0.10)
     declarative-option (0.1.0)
@@ -520,6 +528,8 @@ GEM
       rails (~> 5.0)
       rdf
     rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.2)
@@ -674,6 +684,11 @@ GEM
       rdf-xsd (~> 2.2)
       sparql (~> 2.2)
       sxp (~> 1.0)
+    sidekiq (5.0.5)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.4, < 5)
     signet (0.8.1)
       addressable (~> 2.3)
       faraday (~> 0.9)
@@ -727,7 +742,6 @@ GEM
     stomp (1.4.4)
     sxp (1.0.0)
       rdf (~> 2.0)
-    syslogger (1.6.4)
     temple (0.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -770,6 +784,7 @@ DEPENDENCIES
   brakeman
   bundler-audit!
   byebug
+  capistrano-bundler (~> 1.3)
   capistrano-rails
   capistrano-systemd
   capybara (~> 2.13)
@@ -787,15 +802,17 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.2)
+  redis (~> 3.0)
   rsolr (>= 1.0)
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
   sentry-raven
+  sidekiq
   solr_wrapper (>= 0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
-  syslogger (~> 1.6.0)
+  syslogger!
   therubyracer
   turbolinks (~> 5)
   tzinfo-data
@@ -803,4 +820,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
