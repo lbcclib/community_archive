@@ -6,5 +6,6 @@ module Hyrax
     self.terms += [:resource_type, :crn, :year_course_taught]
     self.required_fields += [:license]
     self.terms -= [:source]
+    self.required_fields -= [:rights_statement]
   end
 end
