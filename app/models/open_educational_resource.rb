@@ -16,7 +16,9 @@ class OpenEducationalResource < ActiveFedora::Base
   property :year_course_taught, predicate: ::RDF::URI('http://purl.org/dc/terms/issued'), multiple: false do |index|
     index.as :stored_searchable, :facetable
   end
-
+property :tech_requirement, predicate:  ::RDF::URI('http://id.loc.gov/ontologies/bibframe/systemRequirement'), multiple: true do |index|
+  index.as :stored_searchable, :facetable
+  end
 
   # This must be included at the end, because it finalizes the metadata
   # schema (by adding accepts_nested_attributes)
