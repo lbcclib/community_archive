@@ -1,0 +1,167 @@
+terms:
+ - id: Architecture and Design
+   term: Architecture and Design
+ - id: Computer Science
+   term: Computer Science
+ - id: Environmental Science
+   term: Environmental Science
+ - id: Engineering
+   term: Engineering
+ - id: Health, Medicine and Nursing
+   term: Health, Medicine and Nursing
+ - id: Information Science
+   term: Information Science
+ - id: Art History
+   term: Art History
+ - id: Graphic Arts
+   term: Graphic Arts
+ - id: Languages
+   term: Languages
+ - id: Literature
+   term: Literature
+ - id: Religious Studies
+   term: Religious Studies
+ - id: Performing Arts
+   term: Performing Arts
+ - id: Philosophy
+   term: Philosophy
+ - id: Visual Arts
+   term: Visual Arts
+ - id: World Cultures
+   term: World Cultures
+ - id: Accounting
+   term: Accounting
+ - id: Communication
+   term: Communication
+ - id: Finance
+   term: Finance
+ - id: Journalism
+   term: Journalism
+ - id: Management
+   term: Management
+ - id: Marketing
+   term: Marketing
+ - id: Public Relations
+   term: Public Relations
+ - id: Agriculture
+   term: Agriculture
+ - id: Automotive Technology and Repair
+   term: Automotive Technology and Repair
+ - id: Criminal Justice
+   term: Criminal Justice
+ - id: Electronic Technology
+   term: Electronic Technology
+ - id: Environmental Studies
+   term: Environmental Studies
+ - id: Film and Music Production
+   term: Film and Music Production
+ - id: Graphic Design
+   term: Graphic Design
+ - id: Manufacturing
+   term: Manufacturing
+ - id: Maritime Science
+   term: Maritime Science
+ - id: Welding
+   term: Welding
+ - id: Early Childhood Development
+   term: Early Childhood Development
+ - id: Educational Technology
+   term: Educational Technology
+ - id: Elementary Education
+   term: Elementary Education
+ - id: Higher Education
+   term: Higher Education
+ - id: Language Education (ESL)
+   term: Language Education (ESL)
+ - id: Special Education
+   term: Special Education
+ - id: Composition and Rhetoric
+   term: Composition and Rhetoric
+ - id: Language, Grammar and Vocabulary
+   term: Language, Grammar and Vocabulary
+ - id: Reading Foundation Skills
+   term: Reading Foundation Skills
+ - id: Reading Informational Text
+   term: Reading Informational Text
+ - id: Reading Literature
+   term: Reading Literature
+ - id: Speaking and Listening
+   term: Speaking and Listening
+ - id: Ancient History
+   term: Ancient History
+ - id: U.S. History
+   term: U.S. History
+ - id: World History
+   term: World History
+ - id: Law
+   term: Law
+ - id: Anatomy/Physiology
+   term: Anatomy/Physiology
+ - id: Biology
+   term: Biology
+ - id: Botany
+   term: Botany
+ - id: Ecology
+   term: Ecology
+ - id: Forestry and Agriculture
+   term: Forestry and Agriculture
+ - id: Genetics
+   term: Genetics
+ - id: Nutrition
+   term: Nutrition
+ - id: Zoology
+   term: Zoology
+ - id: Algebra
+   term: Algebra
+ - id: Calculus
+   term: Calculus
+ - id: Functions
+   term: Functions
+ - id: Geometry
+   term: Geometry
+ - id: Numbers and Operations
+   term: Numbers and Operations
+ - id: Measurement and Data
+   term: Measurement and Data
+ - id: Ratios and Proportions
+   term: Ratios and Proportions
+ - id: Statistics and Probability
+   term: Statistics and Probability
+ - id: Trigonometry
+   term: Trigonometry
+ - id: Astronomy
+   term: Astronomy
+ - id: Chemistry
+   term: Chemistry
+ - id: Oceanography
+   term: Oceanography
+ - id: Geology
+   term: Geology
+ - id: Hydrology
+   term: Hydrology
+ - id: Physical Geography
+   term: Physical Geography
+ - id: Physics
+   term: Physics
+ - id: Anthropology
+   term: Anthropology
+ - id: Archaeology
+   term: Archaeology
+ - id: Cultural Geography
+   term: Cultural Geography
+ - id: Economics
+   term: Economics
+ - id: Ethnic Studies
+   term: Ethnic Studies
+ - id: Linguistics
+   term: Linguistics
+ - id: Political Science
+   term: Political Science
+ - id: Psychology
+   term: Psychology
+ - id: Social Work
+   term: Social Work
+ - id: Sociology
+   term: Sociology
+ - id: Women's Studies
+   term: Women's Studies
