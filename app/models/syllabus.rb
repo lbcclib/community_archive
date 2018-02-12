@@ -14,7 +14,7 @@ class Syllabus < ActiveFedora::Base
     index.as :stored_searchable, :facetable
   end
   property :crn, predicate: ::RDF::URI('http://purl.org/dc/terms/references'), multiple: true do |index|
-    index.as :unstemmed_searchable, :facetable
+    index.as :stored_searchable, :facetable
   end
   property :year_course_taught, predicate: ::RDF::URI('http://purl.org/dc/terms/issued'), multiple: false do |index|
     index.as :stored_searchable, :facetable
