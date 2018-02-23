@@ -1,5 +1,5 @@
 <%= f.input :subject,
   collection: SecondOrderSubjectsService.select_all_options,
   include_blank: true,
-  input_html: { class: 'form-control' }
+  input_html: { class: 'form-control', multiple: true }
 %>
