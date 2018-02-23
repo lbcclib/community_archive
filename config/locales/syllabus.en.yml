@@ -18,5 +18,5 @@ en:
     hints:
       syllabus:
         title: Please include a space between the prefix and number (e.g. ANTH 103)
-        creator: The person teaching the class
+        creator: The person teaching the class, with first name first (e.g. Gloria Anzaldúa)
         year_course_taught: e.g. 2017
