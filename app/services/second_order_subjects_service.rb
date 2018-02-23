@@ -1,5 +1,5 @@
 # Service to add the OERC second order subjects controlled vocabulary
-module SecondOrderSubjectService
+module SecondOrderSubjectsService
   mattr_accessor :authority
   self.authority = Qa::Authorities::Local.subauthority_for('second_order_subjects')
 
