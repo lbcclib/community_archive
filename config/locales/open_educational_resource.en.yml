@@ -8,10 +8,12 @@ en:
         description:        "Learning objects released under open licenses"
   simple_form:
     labels:
-      syllabus:
+      open_educational_resource:
         crn: CRN
+        media_format: Media format
+        material_type: Material type
         year_course_taught: Year that this resource was first used
     hints:
-      syllabus:
+      open_educational_resource:
         year_course_taught: e.g. 2017
 

@@ -1,0 +1,5 @@
+<%= f.input :material_type,
+  collection: MaterialTypesService.select_all_options,
+  include_blank: true,
+  input_html: { class: 'form-control', multiple: true }
+%>
