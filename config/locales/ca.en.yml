@@ -11,4 +11,7 @@ en:
     works:
       form:
         next_page: 'Next tab'
-
+  simple_form:
+    hints:
+      defaults:
+        creator: The person or group responsible for the work. Usually this is the author of the content. Enter personal names with first name first, e.g. "Gloria Anzaldúa".

@@ -11,4 +11,7 @@ es:
     works:
       form:
         next_page: Siguinte
-
+  simple_form:
+    hints:
+      defaults:
+        creator: La persona o grupo responsable del trabajo. Generalmente es el autor del contenido. Los nombres personales deben llevar los nombres al principio, ej. "Gloria Anzaldúa".
