@@ -4,9 +4,10 @@ module SecondOrderSubjectsService
   self.authority = Qa::Authorities::Local.subauthority_for('second_order_subjects')
 
   def self.select_all_options
-    authority.all.map do |element|
+    a = authority.all.map do |element|
       [element[:label], element[:id]]
     end
+    return a.sort
   end
 
   def self.label(id)
