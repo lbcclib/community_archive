@@ -25,6 +25,9 @@ class OpenEducationalResource < ActiveFedora::Base
   property :media_format, predicate:  ::RDF::URI('http://purl.org/dc/terms/MediaType'), multiple: true do |index|
     index.as :stored_searchable, :facetable
   end
+  property :sublevel, predicate: ::RDF::URI('http://purl.org/dc/terms/educationLevel'), multiple: true do |index|
+    index.as :stored_searchable, :facetable
+  end
 
   # This must be included at the end, because it finalizes the metadata
   # schema (by adding accepts_nested_attributes)
