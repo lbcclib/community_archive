@@ -110,6 +110,7 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("edition", :stored_searchable)
     config.add_show_field solr_name("material_type", :stored_searchable)
     config.add_show_field solr_name("media_format", :stored_searchable)
+    config.add_show_field solr_name("course_prefix_number_concat", :stored_searchable)
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

@@ -10,10 +10,14 @@ class SyllabusIndexer < Hyrax::WorkIndexer
   include Hyrax::IndexesLinkedMetadata
 
 
-  # Uncomment this block if you want to add custom indexing behavior:
-  # def generate_solr_document
-  #  super.tap do |solr_doc|
-  #    solr_doc['my_custom_field_ssim'] = object.my_custom_property
-  #  end
-  # end
+  def generate_solr_document
+  # Making sure that course numbers are indexed both with and without spaces
+    super.tap do |solr_doc|
+      matches = /([A-Z]{2,4})\s?([0-9]{3})/.match(object.title.first.upcase)
+      if matches and (3 == matches.size)
+        solr_doc['title_tesim'] = matches[1] + ' ' + matches[2]
+        solr_doc['course_prefix_number_concat_tesim'] = matches[1] + matches[2]
+      end
+    end
+  end
 end
