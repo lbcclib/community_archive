@@ -26,6 +26,8 @@ en:
           publisher_tesim: Publisher
           rights_tesim: Rights
           subject_tesim: Subject
+          term_course_taught_tesim: Term course taught
+          year_course_taught_tesim: Year course taught
         show:
           based_near_tesim: Location
           contributor_tesim: Contributor
@@ -42,6 +44,8 @@ en:
           rights_tesim: Rights
           subject_tesim: Subject
           title_tesim: Title
+          term_course_taught_tesim: Term course taught
+          year_course_taught_tesim: Year course taught
   hyrax:
     base:
       form_files:

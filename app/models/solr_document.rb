@@ -29,6 +29,9 @@ class SolrDocument
   def crn
     self[Solrizer.solr_name('crn')]
   end
+  def term_course_taught
+    self[Solrizer.solr_name('term_course_taught')]
+  end
   def year_course_taught
     self[Solrizer.solr_name('year_course_taught')]
   end

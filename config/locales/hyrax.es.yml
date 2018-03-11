@@ -27,6 +27,8 @@ es:
           publisher_tesim: Editor
           rights_tesim: Derechos
           subject_tesim: Tema
+          term_course_taught_tesim: Trimestre del clase
+          year_course_taught_tesim: Año del clase
         show:
           based_near_tesim: Ubicación
           contributor_tesim: Contribuidor
@@ -43,6 +45,8 @@ es:
           rights_tesim: Derechos
           subject_tesim: Tema
           title_tesim: Título
+          term_course_taught_tesim: Trimestre del clase
+          year_course_taught_tesim: Año del clase
   hyrax:
     account_name: Mi identificador de cuenta institucional
     directory:
