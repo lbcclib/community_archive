@@ -77,3 +77,5 @@ group :development, :test do
   gem 'fcrepo_wrapper'
   gem 'rspec-rails'
 end
+
+gem 'loofah', '~> 2.2.1'
