@@ -1,9 +1,7 @@
 GIT
   remote: https://github.com/crohr/syslogger.git
-  revision: eb7df0b811fd26843e99b2e5e85b52a737d4e379
+  revision: 17bcca46e7d5e8393b41392f185ea002233149bc
   branch: fix_formatter
-  specs:
-    syslogger (1.6.4)
 
 GIT
   remote: https://github.com/notch8/bundler-audit.git
@@ -821,4 +819,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
