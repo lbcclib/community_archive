@@ -36,6 +36,7 @@ gem 'sidekiq'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
+gem 'capistrano', '3.9.1'
 gem 'capistrano-rails', group: :development, require: false
 gem 'capistrano-systemd', group: :development, require: false
 gem 'capistrano-bundler', '~> 1.3'
