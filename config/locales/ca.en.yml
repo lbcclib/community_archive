@@ -1,5 +1,7 @@
 en:
   hyrax:
+    contact_form:
+      notice: Please use the contact form to submit inquiries about this system; to report a problem you are experiencing with the system; to request assistance using the system; or to provide general feedback. You can also contact us by email (sandbej at linnbenton dot edu or willihm at linnbenton dot edu).
     content_blocks:
       tabs:
         featured_researcher: 'Featured creator'
