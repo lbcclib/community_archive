@@ -5,7 +5,7 @@ class User < ApplicationRecord
   include Hyrax::User
   include Hyrax::UserUsageStats
 
-  validates :email, format: { with: /.*linnbenton.edu/, message: 'has to end with linnbenton.edu' }
+  validates :email, format: { with: /.*@(mail\.)?linnbenton.edu/, message: 'has to end with linnbenton.edu' }
 
 
 
