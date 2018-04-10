@@ -37,3 +37,6 @@ append :linked_dirs, "log", "public/assets", "public/system", "tmp/pids", "tmp/c
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+# Run bundle exec before rack
+append :bundle_bins, 'rack'
+
