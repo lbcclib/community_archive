@@ -80,6 +80,13 @@ Rails.application.configure do
   }
   config.action_mailer.default_url_options = { :host => ENV['SMTP_HOST'] }
 
+  config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      sender_address: %{'notifications' <libref@linnbenton.edu>},
+      exception_recipients: %w{sandbej@linnbenton.edu},
+      email_prefix: '[COMMUNITYARCHIVE ERROR] '
+    }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true

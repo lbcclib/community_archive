@@ -246,6 +246,9 @@ GEM
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
     erubi (1.7.1)
+    exception_notification (4.2.2)
+      actionmailer (>= 4.0, < 6)
+      activesupport (>= 4.0, < 6)
     execjs (2.7.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
@@ -681,8 +684,6 @@ GEM
     selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
-    sentry-raven (2.7.2)
-      faraday (>= 0.7.6, < 1.0)
     shex (0.5.2)
       ebnf (~> 1.1)
       json-ld (>= 2.2, < 4.0)
@@ -801,6 +802,7 @@ DEPENDENCIES
   devise
   devise-guests (~> 0.6)
   dotenv-rails
+  exception_notification
   fcrepo_wrapper
   hyrax (~> 2.0)
   jbuilder (~> 2.5)
@@ -817,7 +819,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
-  sentry-raven
   sidekiq
   solr_wrapper (>= 0.3)
   spring
