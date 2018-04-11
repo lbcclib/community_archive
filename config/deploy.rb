@@ -26,7 +26,7 @@ set :repo_url, "https://github.com/lbcclib/community_archive.git"
 append :linked_files, ".env", ".env.beta", ".env.production" 
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "public/assets", "public/system", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "public/assets", "public/system", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", ".bundle"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
