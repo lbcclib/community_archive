@@ -81,6 +81,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => ENV['SMTP_HOST'] }
 
   config.middleware.use ExceptionNotification::Rack,
+    :ignore_exceptions => ['Blacklight::Exceptions::RecordNotFound',
+     'I18n::InvalidLocale'] + ExceptionNotifier.ignored_exceptions,
     :email => {
       sender_address: %{'notifications' <libref@linnbenton.edu>},
       exception_recipients: %w{sandbej@linnbenton.edu},
