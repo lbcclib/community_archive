@@ -1,7 +1,7 @@
 zh:
   hyrax:
     icons:
-      video:     'fa fa-video'
+      video:     'fa fa-file-video-o'
     select_type:
       video:
         # TODO: translate `human_name` into Chinese
