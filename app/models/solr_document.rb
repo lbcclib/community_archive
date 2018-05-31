@@ -44,4 +44,7 @@ class SolrDocument
   def contributor_list
     self[Solrizer.solr_name('contributor_list')]
   end
+  def duration_in_minutes
+    self[Solrizer.solr_name('duration_in_minutes')]
+  end
 end
