@@ -1,0 +1,10 @@
+zh:
+  hyrax:
+    icons:
+      video:     'fa fa-video'
+    select_type:
+      video:
+        # TODO: translate `human_name` into Chinese
+        name:               "Video"
+        # TODO: translate `human_name` into Chinese
+        description:        "Video 作品"

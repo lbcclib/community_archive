@@ -1,0 +1,8 @@
+it:
+  hyrax:
+    icons:
+      video:     'fa fa-video'
+    select_type:
+      video:
+        name:               "Video"
+        description:        "Video opere"
