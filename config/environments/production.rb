@@ -1,4 +1,5 @@
 require 'syslogger'
+require_relative '../../lib/multipart_buffer_setter'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.logger = Syslogger.new("COMARCH", Syslog::LOG_PID, Syslog::LOG_LOCAL7)
@@ -88,6 +89,7 @@ Rails.application.configure do
       exception_recipients: %w{sandbej@linnbenton.edu},
       email_prefix: '[COMMUNITYARCHIVE ERROR] '
     }
+  config.middleware.insert_before Rack::Runtime, MultipartBufferSetter
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
