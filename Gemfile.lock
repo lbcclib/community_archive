@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/crohr/syslogger.git
-  revision: 17bcca46e7d5e8393b41392f185ea002233149bc
+  revision: 51758050389ea456afebd776107b4799e991ce12
   branch: fix_formatter
   specs:
     syslogger (1.6.5)
