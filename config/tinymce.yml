@@ -9,4 +9,4 @@ content_block:
     - table
     - fullscreen
 custom:
-<<: *default
+  <<: *default
