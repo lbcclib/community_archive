@@ -1,0 +1,3 @@
+<%= f.input :crn, as: :integer, required: f.object.required?(key),
+  input_html: { class: 'form-control', multiple: true, min: 10000, max: 49999 }
+%>
