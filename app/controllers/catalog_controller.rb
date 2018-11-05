@@ -48,7 +48,7 @@ class CatalogController < ApplicationController
     config.add_facet_field solr_name("keyword", :facetable), limit: 5
     config.add_facet_field solr_name("subject", :facetable), limit: 5
     config.add_facet_field solr_name("language", :facetable), limit: 5
-    config.add_facet_field solr_name("based_near_label", :facetable), limit: 5
+    config.add_facet_field solr_name("based_near_label", :facetable), limit: 5, label: 'Based near'
     config.add_facet_field solr_name("publisher", :facetable), limit: 5
     config.add_facet_field solr_name("file_format", :facetable), limit: 5
     config.add_facet_field solr_name('member_of_collections', :symbol), limit: 5, label: 'Collections'
