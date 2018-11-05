@@ -78,5 +78,5 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-gem 'loofah', '~> 2.2.1'
+gem 'loofah', '~> 2.2.3'
 gem 'exception_notification'
