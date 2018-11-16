@@ -543,7 +543,7 @@ GEM
       nokogiri (~> 1.6)
       rails (~> 5.0)
       rdf
-    rack (2.0.5)
+    rack (2.0.6)
     rack-protection (2.0.3)
       rack
     rack-test (1.1.0)
@@ -820,6 +820,7 @@ DEPENDENCIES
   nokogiri (~> 1.8.1)
   pg (~> 0.18)
   puma (~> 3.7)
+  rack (>= 2.0.6)
   rails (~> 5.1.2)
   redis (~> 3.0)
   rsolr (>= 1.0)

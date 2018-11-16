@@ -80,3 +80,7 @@ end
 
 gem 'loofah', '~> 2.2.3'
 gem 'exception_notification'
+
+
+gem "rack", ">= 2.0.6"
+
