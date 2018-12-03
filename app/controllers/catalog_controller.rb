@@ -282,6 +282,10 @@ class CatalogController < ApplicationController
     # except in the relevancy case).
     # label is key, solr field is value
     config.add_sort_field "score desc, #{uploaded_field} desc", label: "relevance"
+    config.add_sort_field "#{title_field} asc", label: "Title [A-Z]"
+    config.add_sort_field "#{title_field} desc", label: "Title [Z-A]"
+    config.add_sort_field "date_created desc", label: "date created \u25BC"
+    config.add_sort_field "date_created asc", label: "date created \u25B2"
     config.add_sort_field "#{uploaded_field} desc", label: "date uploaded \u25BC"
     config.add_sort_field "#{uploaded_field} asc", label: "date uploaded \u25B2"
     config.add_sort_field "#{modified_field} desc", label: "date modified \u25BC"

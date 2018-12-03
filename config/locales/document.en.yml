@@ -6,3 +6,11 @@ en:
       document:
         name:               "Document"
         description:        "Any document"
+  simple_form:
+    labels:
+      document:
+        date_created: Publication year
+    hints:
+      document:
+        date_created: The year your document was created.
+
