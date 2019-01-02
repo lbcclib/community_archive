@@ -23,6 +23,9 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'nokogiri', '~> 1.8.1'
 
+gem 'active-fedora', '11.5.2'
+gem 'devise_cas_authenticatable'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
