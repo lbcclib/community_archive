@@ -9,7 +9,7 @@ set :systemd_unit, "communityarchive.service"
 set :systemd_use_sudo, true
 set :systemd_roles, %w(app)
 
-set :branch, ENV.fetch('REVISION', 'add_cas')
+set :branch, ENV.fetch('REVISION', 'master')
 
 
 # Configuration
