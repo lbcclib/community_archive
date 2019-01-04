@@ -1,13 +1,9 @@
-CAT
-<%= f.object.inspect %>
-KEY: <%= key %>
 <% if f.object.class.multiple? key %>
   <%= f.input :crn, as: :multi_value, required: f.object.required?(key),
-    input_html: { type: 'integer', class: 'form-control', min: 10000, max: 49999 }
+    input_html: { type: :integer, class: 'form-control', min: 10000, max: 49999 }
   %>
 <% else %>
   <%= f.input :crn, as: :integer, required: f.object.required?(key),
     input_html: { class: 'form-control', min: 10000, max: 49999 }
   %>
 <% end %>
-
