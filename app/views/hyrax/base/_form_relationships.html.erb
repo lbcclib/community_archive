@@ -1,9 +1,18 @@
 <% if Flipflop.assign_admin_set? %>
   <%# TODO: consider `Hyrax::AdminSetOptionsPresenter.select_options_for(controller: controller)` instead %>
-  <%= f.input :admin_set_id, as: :select,
+  <% sorted_admin_sets = Hyrax::AdminSetOptionsPresenter.new(Hyrax::AdminSetService.new(controller)).select_options.sort {|x,y| if x[0] == "Default admin set" then 1 else x[0] <=> y[0] end} %>
+  <% if f.object.persisted? %>
+    <%= f.input :admin_set_id, as: :select,
       include_blank: false,
-      collection: Hyrax::AdminSetOptionsPresenter.new(Hyrax::AdminSetService.new(controller)).select_options.sort {|x,y| if x[0] == "Default admin set" then 1 else x[0] <=> y[0] end},
+      collection: sorted_admin_sets,
       input_html: { class: 'form-control' } %>
+  <% else %>
+    <%= f.input :admin_set_id, as: :select,
+      include_blank: false,
+      collection: sorted_admin_sets,
+      selected: sorted_admin_sets[0][1],
+      input_html: { class: 'form-control' } %>
+  <% end %>
 <% end %>
 
 <%= render 'form_in_works', f: f %>
