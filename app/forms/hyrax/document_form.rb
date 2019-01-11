@@ -5,5 +5,6 @@ module Hyrax
     self.model_class = ::Document
     self.terms += [:resource_type, :accessibility_statement]
     self.terms -= [:source]
+    self.required_fields -= [:rights_statement]
   end
 end
