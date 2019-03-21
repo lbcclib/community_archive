@@ -11,8 +11,9 @@ class CommunityArchiveIndexer < Hyrax::WorkIndexer
 
 
   def generate_solr_document
-  super.tap do |solr_doc|
-    solr_doc['title_for_sorting_tesi'] = object.title.first
-    solr_doc['date_created_for_sorting_tesi'] = object.date_created.first
+    super.tap do |solr_doc|
+      solr_doc['title_for_sorting_tesi'] = object.title.first
+      solr_doc['date_created_for_sorting_tesi'] = object.date_created.first
+    end
   end
 end
