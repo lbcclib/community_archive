@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hyrax', '~> 2.2.4'
+gem 'hyrax', '~> 2.5.0'
 gem 'clamav'
 #gem 'hydra-derivatives', '~> 3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -74,7 +74,7 @@ end
 
 gem 'rsolr', '>= 1.0'
 gem 'jquery-rails'
-gem 'devise'
+gem 'devise', '~> 4.6.0'
 gem 'devise-guests', '~> 0.6'
 group :development, :test do
   gem 'fcrepo_wrapper'
@@ -86,4 +86,5 @@ gem 'exception_notification'
 
 
 gem "rack", ">= 2.0.6"
-
+gem "actionview", "~> 5.1.6.2"
+gem "bootstrap-sass", "~> 3.4.1"
