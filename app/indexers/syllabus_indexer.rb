@@ -2,7 +2,9 @@
 #  `rails generate hyrax:work Syllabus`
 class SyllabusIndexer < CommunityArchiveIndexer
   def generate_solr_document
-  # Making sure that course numbers are indexed both with and without spaces
+    super
+
+    # Making sure that course numbers are indexed both with and without spaces
     super.tap do |solr_doc|
       terms = Hash['1', 'Summer', '2', 'Fall', '3', 'Winter', '4', 'Spring']
       relevant_terms = []
