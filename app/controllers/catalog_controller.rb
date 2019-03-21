@@ -282,10 +282,10 @@ class CatalogController < ApplicationController
     # except in the relevancy case).
     # label is key, solr field is value
     config.add_sort_field "score desc, #{uploaded_field} desc", label: "relevance"
-    config.add_sort_field "title_tesim asc", label: "Title [A-Z]"
-    config.add_sort_field "title_tesim desc", label: "Title [Z-A]"
-    config.add_sort_field "date_created_tesim desc", label: "date created \u25BC"
-    config.add_sort_field "date_created_tesim asc", label: "date created \u25B2"
+    config.add_sort_field "title_for_sorting_tesi asc", label: "Title [A-Z]"
+    config.add_sort_field "title_for_sorting_tesi desc", label: "Title [Z-A]"
+    config.add_sort_field "date_created_for_sorting_tesi desc", label: "date created \u25BC"
+    config.add_sort_field "date_created_for_sorting_tesi asc", label: "date created \u25B2"
     config.add_sort_field "#{uploaded_field} desc", label: "date uploaded \u25BC"
     config.add_sort_field "#{uploaded_field} asc", label: "date uploaded \u25B2"
     config.add_sort_field "#{modified_field} desc", label: "date modified \u25BC"
