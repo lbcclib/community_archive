@@ -1,11 +1,17 @@
-<h3>
-  <span class="sr-only">Title</span>
-  <%= link_to truncate(featured.title.first, length: 28, separator: ' '), [main_app, featured] %>
-</h3>
 <div>
-  <span class="sr-only">Creators</span>
-  <%= link_to_facet_list(featured.creator, 'creator', '') %>
-</div><div>
-  <span class="sr-only">Keywords</span>
-  <%= link_to_facet_list(featured.keyword, 'keyword', '') %>
+  <div class="featured-item-title">
+    <span class="sr-only"><%= t('hyrax.homepage.featured_works.document.title_label') %></span>
+    <h3>
+      <%= link_to [main_app, featured] do %>
+        <%= render_thumbnail_tag(featured, {width: 90}, {suppress_link: true}) + featured.title.first %>
+      <% end %>
+    </h3>
+  </div>
+  <!-- customization here: show the Creators instead of Depositors of a featured work -->
+  <div class="featured-field featured-item-depositor">
+    <span class="featured-label">Creators:</span> <%= link_to_facet_list(featured.creator, 'creator', '') %>
+  </div>
+  <div class="featured-field featured-item-keywords">
+    <span class="featured-label"><%= t('hyrax.homepage.featured_works.document.keyword_label') %>:</span> <%= link_to_facet_list(featured.keyword, 'keyword', t('hyrax.homepage.featured_works.document.keyword_missing')) %>
+  </div>
 </div>
