@@ -4,7 +4,7 @@ namespace :syllabi do
         task :list => :environment do
             Syllabus.find_each do |w|
                 if w.file_sets.empty?
-                    puts "http://libarchive.linnbenton.edu/concern/syllabus/" + w.id
+                    puts "http://libarchive.linnbenton.edu/concern/syllabi/" + w.id
                 end
             end
         end
