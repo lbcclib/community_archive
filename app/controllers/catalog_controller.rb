@@ -295,6 +295,18 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
+
+    config.oai = {
+      provider: {
+        repository_name: 'CommunityArchive@LBCC',
+        repository_url: 'http://libarchive.linnbenton.edu/catalog/oai',
+      },
+      document: {
+        set_fields: [
+          { label: 'type', solr_field: 'human_readable_type_tesim' }
+        ]
+      }
+    }
   end
 
   # disable the bookmark control from displaying in gallery view
