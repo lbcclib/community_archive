@@ -88,3 +88,4 @@ gem 'exception_notification'
 gem "rack", ">= 2.0.6"
 gem "actionview", "~> 5.1.6.2"
 gem "bootstrap-sass", "~> 3.4.1"
+gem 'blacklight_oai_provider'
