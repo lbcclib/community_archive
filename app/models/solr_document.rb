@@ -50,16 +50,21 @@ class SolrDocument
     self[Solrizer.solr_name('duration_in_minutes')]
   end
   field_semantics.merge!(
+    audience: 'primary_audience_ssim',
     contributor: 'contributor_tesim',
     creator: 'creator_tesim',
     date: 'date_created_tesim',
     description: 'description_tesim',
+    educationLevel: 'sublevel_ssim',
+    format: 'media_format_tesim',
     identifier: 'identifier_tesim',
     language: 'language_tesim',
-    publisher: 'publisher_tesim',
+    license: 'license_tesim',
+    publisher: 'providing_institution_ssim',
     relation: 'nesting_collection__pathnames_ssim',
     rights: 'rights_statement_tesim',
     subject: 'subject_tesim',
     title: 'title_tesim',
+    type: 'resource_type_tesim'
   )
 end
