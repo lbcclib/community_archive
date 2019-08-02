@@ -21,7 +21,6 @@ class SyllabusIndexer < CommunityArchiveIndexer
         matches = /^([A-Z]{2,4})\s?([0-9]{3,4})([A-Z]?)$/.match(title.upcase)
         if matches and (4 == matches.size)
           if ('' == matches[3])
-	    puts solr_doc['title_tesim'].class
             solr_doc['title_tesim'] << matches[1] + ' ' + matches[2]
             solr_doc['course_prefix_number_concat_tesim'] << matches[1] + matches[2]
 	  else
@@ -32,6 +31,7 @@ class SyllabusIndexer < CommunityArchiveIndexer
           solr_doc['title_tesim'] << title.upcase
         end
       end
+      solr_doc['url_for_work_tesim'] = ['http://libarchive.linnbenton.edu/concern/syllabi/' + object.id]
     end
   end
 end
