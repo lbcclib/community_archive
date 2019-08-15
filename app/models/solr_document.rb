@@ -49,6 +49,7 @@ class SolrDocument
   def duration_in_minutes
     self[Solrizer.solr_name('duration_in_minutes')]
   end
+
   field_semantics.merge!(
     audience: 'primary_audience_ssim',
     contributor: 'contributor_tesim',

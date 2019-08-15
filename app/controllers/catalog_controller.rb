@@ -303,7 +303,7 @@ class CatalogController < ApplicationController
       },
       document: {
         set_fields: [
-          { label: 'type', solr_field: 'human_readable_type_tesim' }
+          { label: 'type', solr_field: 'has_model_ssim' }
         ]
       }
     }
