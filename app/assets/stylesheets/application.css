@@ -16,3 +16,16 @@
  */
 
 .no-left-margin {margin-left: 0;}
+
+a .institution_name {
+  color: #000;
+}
+
+a .institution_name:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.navbar {
+  padding-bottom: 22px
+}
