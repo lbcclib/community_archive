@@ -784,6 +784,7 @@ GEM
       net-ssh (>= 2.8.0)
     sxp (1.1.0)
       rdf (~> 3.1)
+    syslogger (1.6.5)
     temple (0.8.2)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -863,6 +864,7 @@ DEPENDENCIES
   solr_wrapper (>= 0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
+  syslogger
   therubyracer
   turbolinks (~> 5)
   tzinfo-data

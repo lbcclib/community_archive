@@ -45,7 +45,7 @@ gem 'capistrano-rails', group: :development, require: false
 gem 'capistrano-systemd', group: :development, require: false
 gem 'capistrano-bundler', '~> 1.3'
 gem 'dotenv-rails'
-#gem 'syslogger', github: 'crohr/syslogger', branch: 'fix_formatter'
+gem 'syslogger'
 gem 'lograge','~> 0.3.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
