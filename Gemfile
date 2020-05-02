@@ -5,8 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hyrax', '~> 2.5.0'
-gem 'clamav'
+gem 'hyrax', '~> 2.6.0'
+gem 'linkeddata', '~> 3.1.1'
+#gem 'clamav'
 #gem 'hydra-derivatives', '~> 3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
@@ -21,9 +22,9 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
-gem 'nokogiri', '~> 1.8.1'
+#gem 'nokogiri', '~> 1.8.1'
 
-gem 'active-fedora', '11.5.2'
+#gem 'active-fedora', '11.5.2'
 gem 'devise_cas_authenticatable'
 
 # Use CoffeeScript for .coffee assets and views
@@ -44,7 +45,7 @@ gem 'capistrano-rails', group: :development, require: false
 gem 'capistrano-systemd', group: :development, require: false
 gem 'capistrano-bundler', '~> 1.3'
 gem 'dotenv-rails'
-gem 'syslogger', github: 'crohr/syslogger', branch: 'fix_formatter'
+#gem 'syslogger', github: 'crohr/syslogger', branch: 'fix_formatter'
 gem 'lograge','~> 0.3.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
