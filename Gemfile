@@ -75,7 +75,7 @@ end
 
 gem 'rsolr', '>= 1.0'
 gem 'jquery-rails'
-gem 'devise', '~> 4.6.0'
+gem 'devise', '~> 4.7.1'
 gem 'devise-guests', '~> 0.6'
 group :development, :test do
   gem 'fcrepo_wrapper'
