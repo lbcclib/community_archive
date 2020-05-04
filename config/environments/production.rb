@@ -2,7 +2,7 @@ require 'syslogger'
 require_relative '../../lib/multipart_buffer_setter'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.logger = Syslogger.new("COMARCH", Syslog::LOG_PID, Syslog::LOG_LOCAL7)
+  config.logger = ActiveSupport::TaggedLogging.new(Syslogger.new("COMARCH", Syslog::LOG_PID, Syslog::LOG_LOCAL7))
   config.lograge.enabled = true
 
   # Code is not reloaded between requests.
