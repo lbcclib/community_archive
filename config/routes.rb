@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+        mount BrowseEverything::Engine => '/browse'
   concern :oai_provider, BlacklightOaiProvider::Routes.new
 
   
