@@ -45,7 +45,7 @@ gem 'capistrano-rails', group: :development, require: false
 gem 'capistrano-systemd', group: :development, require: false
 gem 'capistrano-bundler', '~> 1.3'
 gem 'dotenv-rails'
-gem 'syslogger'
+gem 'syslogger', github: 'crohr/syslogger'
 gem 'lograge','~> 0.3.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -75,14 +75,14 @@ end
 
 gem 'rsolr', '>= 1.0'
 gem 'jquery-rails'
-gem 'devise', '~> 4.6.0'
+gem 'devise', '~> 4.7.1'
 gem 'devise-guests', '~> 0.6'
 group :development, :test do
   gem 'fcrepo_wrapper'
   gem 'rspec-rails'
 end
 
-gem 'loofah', '~> 2.2.3'
+gem 'loofah', '~> 2.3.1'
 gem 'exception_notification'
 
 

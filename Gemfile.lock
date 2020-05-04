@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/crohr/syslogger.git
+  revision: 32d380026761829db46e7cbc15b48d00bb64e872
+  specs:
+    syslogger (1.6.5)
+
+GIT
   remote: https://github.com/notch8/bundler-audit.git
   revision: ca43a227b73e24b0e59fcae050aa4165f39b5334
   specs:
@@ -186,10 +192,10 @@ GEM
     declarative-option (0.1.0)
     deprecation (1.0.0)
       activesupport
-    devise (4.6.2)
+    devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 6.0)
+      railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
     devise-guests (0.7.0)
@@ -503,7 +509,7 @@ GEM
       actionpack (>= 3)
       activesupport (>= 3)
       railties (>= 3)
-    loofah (2.2.3)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -587,8 +593,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.2.0)
-      loofah (~> 2.2, >= 2.2.2)
+    rails-html-sanitizer (1.3.0)
+      loofah (~> 2.3)
     rails_autolink (1.1.6)
       rails (> 3.1)
     railties (5.1.6.2)
@@ -784,7 +790,6 @@ GEM
       net-ssh (>= 2.8.0)
     sxp (1.1.0)
       rdf (~> 3.1)
-    syslogger (1.6.5)
     temple (0.8.2)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -838,7 +843,7 @@ DEPENDENCIES
   capistrano-systemd
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
-  devise (~> 4.6.0)
+  devise (~> 4.7.1)
   devise-guests (~> 0.6)
   devise_cas_authenticatable
   dotenv-rails
@@ -850,7 +855,7 @@ DEPENDENCIES
   linkeddata (~> 3.1.1)
   listen (>= 3.0.5, < 3.2)
   lograge (~> 0.3.1)
-  loofah (~> 2.2.3)
+  loofah (~> 2.3.1)
   pg (~> 0.18)
   puma (~> 3.7)
   rack (>= 2.0.6)
@@ -864,7 +869,7 @@ DEPENDENCIES
   solr_wrapper (>= 0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
-  syslogger
+  syslogger!
   therubyracer
   turbolinks (~> 5)
   tzinfo-data
