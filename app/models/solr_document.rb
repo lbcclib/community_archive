@@ -60,10 +60,9 @@ class SolrDocument
     format: 'media_format_tesim',
     identifier: 'url_for_work_tesim',
     language: 'language_tesim',
-    license: 'license_tesim',
     publisher: 'providing_institution_ssim',
     relation: 'nesting_collection__pathnames_ssim',
-    rights: 'rights_statement_tesim',
+    rights: ['rights_statement_tesim', 'license_tesim'],
     subject: 'subject_tesim',
     title: 'title_tesim',
     type: 'resource_type_tesim'
