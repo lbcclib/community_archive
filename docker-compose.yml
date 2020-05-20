@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/var/www/hyrax/
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=commarch
+      - POSTGRES_USER=commarch
+      - POSTGRES_PASSWORD=commarch
+    depends_on:
+      - db
+      - solr
+      - fcrepo
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_DB=commarch
+      - POSTGRES_USER=commarch
+      - POSTGRES_PASSWORD=commarch
+
+  solr:
+    image: solr:alpine
+
+  fcrepo:
+    image: ualbertalib/docker-fcrepo4:4.7
+    environment:
+      - JAVA_OPTS=${JAVA_OPTS} -Dfcrepo.modeshape.configuration="classpath:/config/file-simple/repository.json" -Dfcrepo.object.directory="/data/objects" -Dfcrepo.binary.directory="/data/binaries"
+    expose:
+      - 8080
+
