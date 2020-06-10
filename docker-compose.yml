@@ -10,6 +10,7 @@ services:
       - POSTGRES_DB=commarch
       - POSTGRES_USER=commarch
       - POSTGRES_PASSWORD=commarch
+      - SOLR_URL=http://solr:8983/solr/hydra-development
     depends_on:
       - db
       - solr
@@ -25,7 +26,16 @@ services:
       - POSTGRES_PASSWORD=commarch
 
   solr:
-    image: solr:alpine
+    image: solr:6.5.1
+    volumes:
+      - ./solr/conf:/opt/solr/conf
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - hydra-development
+      - /opt/solr/conf
+    ports:
+      - "8983:8983"
 
   fcrepo:
     image: ualbertalib/docker-fcrepo4:4.7
