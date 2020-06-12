@@ -58,7 +58,7 @@ class SolrDocument
     description: 'description_tesim',
     educationLevel: 'sublevel_ssim',
     format: 'media_format_tesim',
-    identifier: 'url_for_work_tesim',
+    identifier: ['url_for_work_tesim', 'related_url_tesim'],
     language: 'language_tesim',
     publisher: 'providing_institution_ssim',
     relation: 'nesting_collection__pathnames_ssim',
