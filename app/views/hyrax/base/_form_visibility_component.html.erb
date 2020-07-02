@@ -31,6 +31,13 @@
         </li>
         <li class="radio">
           <label>
+            <%= f.radio_button :visibility, Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_AUTHENTICATED %>
+            <%= visibility_badge(Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_AUTHENTICATED) %>
+            <%= t('hyrax.visibility.authenticated.note_html', institution: institution_name) %>
+          </label>
+        </li>
+        <li class="radio">
+          <label>
             <%= f.radio_button :visibility, Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_EMBARGO, data: { 'target': '#collapseEmbargo' } %>
             <%= visibility_badge(Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_EMBARGO) %>
             <div class="collapse" id="collapseEmbargo">
