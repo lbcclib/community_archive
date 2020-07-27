@@ -5,12 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hyrax', '~> 2.6.0'
+gem 'hyrax', '~> 2.8.0'
 gem 'linkeddata', '> 3.0'
 #gem 'clamav'
 #gem 'hydra-derivatives', '~> 3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.2'
+gem 'rails', '~> 5.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -86,7 +86,6 @@ gem 'exception_notification'
 
 
 gem "rack", ">= 2.0.6"
-gem "actionview", "~> 5.1.6.2"
 gem "bootstrap-sass", "~> 3.4.1"
 gem 'blacklight_oai_provider'
 gem 'rdf-vocab', '= 3.1.4' # Specific version pinned due to this issue: https://github.com/samvera/active_fedora/issues/1420
