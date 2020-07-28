@@ -29,25 +29,25 @@ class SolrDocument
   use_extension( Hydra::ContentNegotiation )
 
   def crn
-    self[Solrizer.solr_name('crn')]
+    self['crn_tesim']
   end
   def term_course_taught
-    self[Solrizer.solr_name('term_course_taught')]
+    self['term_course_taught_tesim']
   end
   def year_course_taught
-    self[Solrizer.solr_name('year_course_taught')]
+    self['year_course_taught_tesim']
   end
   def edition
-    self[Solrizer.solr_name('edition')]
+    self['edition_tesim']
   end
   def volume
-    self[Solrizer.solr_name('volume')]
+    self['volume_tesim']
   end
   def contributor_list
-    self[Solrizer.solr_name('contributor_list')]
+    self['contributor_list_tesim']
   end
   def duration_in_minutes
-    self[Solrizer.solr_name('duration_in_minutes')]
+    self['duration_in_minutes_tesim']
   end
 
   field_semantics.merge!(
