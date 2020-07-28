@@ -8,8 +8,6 @@ class Video < ActiveFedora::Base
   # self.valid_child_concerns = []
   validates :title, presence: { message: 'Your work must have a title.' }
 
-  self.human_readable_type = 'Video'
-
   property :duration_in_minutes, predicate: ::RDF::URI('http://id.loc.gov/ontologies/bibframe/duration'), multiple: false do |index|
     index.as :stored_searchable, :facetable
   end

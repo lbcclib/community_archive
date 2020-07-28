@@ -8,8 +8,6 @@ class Syllabus < ActiveFedora::Base
   # self.valid_child_concerns = []
   validates :title, presence: { message: 'Your work must have a title.' }
 
-  self.human_readable_type = 'Syllabus'
-
   property :accessibility_statement, predicate: ::RDF::URI('http://purl.org/dc/terms/description'), multiple: false do |index|
     index.as :stored_searchable, :facetable
   end

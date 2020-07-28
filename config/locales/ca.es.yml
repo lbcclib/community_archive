@@ -1,4 +1,12 @@
 es:
+  activefedora:
+    models:
+      document: Documento
+      image: Imagen
+      newspaper_issue: Periódico
+      open_educational_resource: Recurso Educativo Abierto
+      syllabus: Silaba
+      video: Vídeo
   hyrax:
     contact_form:
       notice: Por favor, utilice el formulario de contacto para enviar preguntas sobre este sistema; para reportar un problema que está experimentando con el sistema; solicitar ayuda usando el sistema; o para comentarios generales. Consulte la página de ayuda para obtener información adicional acerca de este sistema. También puede contactarnos por correo electrónico escribiendo a sandbej@linnbenton.edu o willihm@linnbenton.edu.

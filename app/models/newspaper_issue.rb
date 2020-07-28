@@ -9,8 +9,6 @@ class NewspaperIssue < ActiveFedora::Base
   # self.valid_child_concerns = []
   validates :title, presence: { message: 'Your work must have a title.' }
 
-  self.human_readable_type = 'Newspaper Issue'
-
   property :contributor_list, predicate: ::RDF::URI('http://purl.org/dc/terms/contributor'), multiple: false do |index|
     index.as :stored_searchable
   end
