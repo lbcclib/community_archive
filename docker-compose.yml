@@ -11,6 +11,7 @@ services:
       - POSTGRES_USER=commarch
       - POSTGRES_PASSWORD=commarch
       - SOLR_URL=http://solr:8983/solr/hydra-development
+      - DEV_REDIS_HOST=redis
     depends_on:
       - db
       - solr
@@ -24,6 +25,9 @@ services:
       - POSTGRES_DB=commarch
       - POSTGRES_USER=commarch
       - POSTGRES_PASSWORD=commarch
+
+  redis:
+    image: redis:alpine
 
   solr:
     image: solr:6.5.1
