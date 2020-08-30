@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  config.secret_key = 'c7f4bb1f8386a34961340e62d11be649d9179d04e91586d9473ecd1d57134b1c02dd6102502fc41b13213284538c12d6d18e1c9faf6388b7371e21e40bcc5ea9'
+  config.secret_key = ENV.fetch('DEVISE_SECRET_KEY', 'qqnYEzMpz5OOfUgNmfGWQ7BJnj8A8WH0yztDvJ4oAuV6r8lWrkdAMhksSpSa')
 
   config.cas_base_url = 'https://login.linnbenton.edu/idp/profile/cas'
   config.cas_enable_single_sign_out = true
