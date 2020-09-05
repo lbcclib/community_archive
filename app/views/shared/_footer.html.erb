@@ -1,15 +1,34 @@
 <footer class="navbar navbar-inverse site-footer">
-  <div class="container-fluid">
-    <div class="navbar-text text-left">
-        <p><%= t('hyrax.footer.service_html') %></p>
-        <p><%= t('hyrax.product_name') %> v<%= Hyrax::VERSION %></p>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-2">
+      <ul class="arrow-list">
+        <li><%= link_to t('lbcc.contact'), 'https://library.linnbenton.edu/contact' %></li>
+        <li><%= link_to t('lbcc.account'), 'https://libcat.linnbenton.edu/eg/opac/myopac/main?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain' %></li>
+        <li><%= link_to t('hyrax.footer.dmca'), hyrax.about_path %></li>
+        <li><%= t('hyrax.footer.service_html') %></li>
+      </ul>
+      <a href="https://www.facebook.com/lbcclibrary/" class="dark-blue-background">
+        <span class="fa fa-facebook-square fa-3x" aria-label="Facebook"></span></a>
+      <a href="https://www.instagram.com/lbcc_library/" class="dark-blue-background">
+        <span class="fa fa-instagram fa-3x" aria-label="Instagram"></span></a>
     </div>
-    <div class="navbar-right">
-      <div class="navbar-text text-right">
-        <p><%= link_to t('hyrax.footer.dmca'), hyrax.about_path %></p>
-        <p><%= t('hyrax.footer.copyright_html') %></p>
-        <p><%= t('hyrax.background_attribution_html') %></p>
-      </div>
+    <div class="col-md-2">
+LBCC Library<br />
+6500 Pacific Blvd. SW<br />
+Albany, Oregon 97321
+    </div>
+    <div class="col-md-2">
+Healthcare Occupations Center Library<br />
+541-918-8840<br />
+300 Mullins Dr.<br />
+Lebanon, Oregon 97355
+    </div>
+    <div class="col-md-2">
+Benton Center<br />
+757 NW Polk Ave.<br />
+Corvallis, Oregon 97330
     </div>
   </div>
 </footer>
+
+

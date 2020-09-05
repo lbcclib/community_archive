@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&family=Merriweather&display=swap');
+
+$black: #000;
+$white: #FFF;
+$lbcc-yellow: #FDB913;
+$lbcc-blue: #005B94;
+$lbcc-sky-blue: #27AAE1;
+$lbcc-maroon: #873D5A;
+$lbcc-green: #45A169;
+$lbcc-grey: #E1E0DC;
+
+body {
+  font-family: Lato;
+  margin-bottom: 0 !important;
+}
+
+.btn-primary { /* the button color is set using the UI */
+  color: $black;
+}
+
+.nav-pills li.active a, .nav-pills li.active a:hover, .nav-pills li.active a.focus {
+  color: $white;
+  background-color: $lbcc-blue;
+}
+
+.panel-default .panel-heading {
+  background-color: $lbcc-grey;
+  color: $black;
+}
+
+.panel-heading.collapse-toggle .panel-title::after {
+  color: $lbcc-maroon;
+}
+
+a {
+  color: $lbcc-blue;
+}
+
+.search-result-title a {
+  font-size: 26px;
+}
+
+/* for the footer to match SubjectsPlus */
+.dark-blue-background, a.dark-blue-background, a.dark-blue-background:hover, a.dark-blue-background:visited, a.dark-blue-background:active {
+  background:#005B94;
+  color:#fff;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 10px 0 0px 0;
+    color: #fff;
+    background: #005b94;
+    background-image: url('https://libhelp.linnbenton.edu/assets/images/public/dark_blue_tree.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: auto !important;
+    position: relative !important;
+    min-height: 300px;
+}
+
+ul.link-list-display, ul.arrow-list {
+    list-style: none;
+}
+
+ul.link-list-display li, ul.arrow-list li {
+    padding-left: 3px;
+    margin-bottom: 10px;
+}
+
+ul.link-list-display li::before, ul.arrow-list li::before {
+    content: "\f0a9";
+    font-family:'FontAwesome';
+}
+
+footer ul.arrow-list li a {
+    color: #fff;
+    padding-left: 4px;
+}
