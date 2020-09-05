@@ -32,6 +32,7 @@ class SyllabusIndexer < CommunityArchiveIndexer
         end
       end
       solr_doc['url_for_work_tesim'] = ['http://libarchive.linnbenton.edu/concern/syllabi/' + object.id]
+      solr_doc['resource_type_sim'] = 'Syllabus'
     end
   end
 end
