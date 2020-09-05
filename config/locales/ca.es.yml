@@ -21,6 +21,9 @@ es:
     works:
       form:
         next_page: Siguinte
+  lbcc:
+    account: Mi cuenta de biblioteca
+    contact: Contáctenos
   simple_form:
     hints:
       defaults:

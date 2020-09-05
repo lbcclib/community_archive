@@ -21,6 +21,9 @@ en:
     works:
       form:
         next_page: 'Next tab'
+  lbcc:
+    account: Check my library account
+    contact: Get research help
   simple_form:
     hints:
       defaults:

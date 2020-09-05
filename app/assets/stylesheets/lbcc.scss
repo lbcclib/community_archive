@@ -42,7 +42,7 @@ a {
 
 /* for the footer to match SubjectsPlus */
 .dark-blue-background, a.dark-blue-background, a.dark-blue-background:hover, a.dark-blue-background:visited, a.dark-blue-background:active {
-  background:#005B94;
+  background: $lbcc-blue;
   color:#fff;
 }
 
@@ -50,10 +50,6 @@ footer {
     margin-top: 80px;
     padding: 10px 0 0px 0;
     color: #fff;
-    background: #005b94;
-    background-image: url('https://libhelp.linnbenton.edu/assets/images/public/dark_blue_tree.png');
-    background-repeat: no-repeat;
-    background-position: right;
     height: auto !important;
     position: relative !important;
     min-height: 300px;
@@ -76,4 +72,11 @@ ul.link-list-display li::before, ul.arrow-list li::before {
 footer ul.arrow-list li a {
     color: #fff;
     padding-left: 4px;
+}
+
+footer.navbar.navbar-inverse.site-footer {
+    background: $lbcc-blue;
+    background-image: url('https://libhelp.linnbenton.edu/assets/images/public/dark_blue_tree.png');
+    background-repeat: no-repeat;
+    background-position: right;
 }
