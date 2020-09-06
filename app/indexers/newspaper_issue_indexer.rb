@@ -1,7 +1,6 @@
 # Generated via
 #  `rails generate hyrax:work NewspaperIssue`
 class NewspaperIssueIndexer < CommunityArchiveIndexer
-
   # Uncomment this block if you want to add custom indexing behavior:
   def generate_solr_document
     super.tap do |solr_doc|
