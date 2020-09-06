@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 module Hyrax
   class ContactForm
     include ActiveModel::Model
     attr_accessor :contact_method, :category, :name, :email, :subject, :message
     validates :email, :category, :name, :subject, :message, presence: true
-    validates :email, format: /\A([\w\.%\+\-]+)@(mail\.)?linnbenton.edu/i, allow_blank: true
+    validates :email, format: /\A([\w\.%\+\-]+)@(mail\.)?linnbenton.edu\z/i, allow_blank: true
 
     # - can't use this without ActiveRecord::Base validates_inclusion_of :category, in: self.class.issue_types_for_locale
 
