@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hyrax', '~> 2.8.0'
+gem 'hyrax', '~> 2.9.0'
 gem 'linkeddata', '> 3.0'
 #gem 'clamav'
 #gem 'hydra-derivatives', '~> 3.3'
