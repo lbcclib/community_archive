@@ -46,6 +46,13 @@ a {
   color:#fff;
 }
 
+.institution_name {
+  font-size: 2em;
+  font-family: Merriweather;  
+  font-weight: 700;
+  color: $lbcc-blue;
+}
+
 footer {
     margin-top: 80px;
     padding: 10px 0 0px 0;
@@ -79,4 +86,12 @@ footer.navbar.navbar-inverse.site-footer {
     background-image: url('https://libhelp.linnbenton.edu/assets/images/public/dark_blue_tree.png');
     background-repeat: no-repeat;
     background-position: right;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.institution-nav {
+    padding-top: 6px;
 }
