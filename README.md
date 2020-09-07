@@ -7,6 +7,7 @@ LBCC's institutional repository
     cd community_archive
     docker-compose up -d
     docker-compose exec app bin/rake db:migrate
+    docker-compose exec app bundle exec rails hyrax:default_collection_types:create
     docker-compose exec app bin/rails hyrax:default_admin_set:create
 
 To make life easier, after you create an account, you'll also want to:

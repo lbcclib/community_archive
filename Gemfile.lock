@@ -80,6 +80,7 @@ GEM
     almond-rails (0.3.0)
       rails (>= 4.2)
     arel (9.0.0)
+    ast (2.4.1)
     autoprefixer-rails (9.8.6.3)
       execjs
     awesome_nested_set (3.2.1)
@@ -581,6 +582,9 @@ GEM
       rails (> 3.2.0)
     orm_adapter (0.5.0)
     os (1.1.1)
+    parallel (1.19.2)
+    parser (2.7.1.4)
+      ast (~> 2.4.1)
     pg (0.21.0)
     posix-spawn (0.3.15)
     power_converter (0.1.2)
@@ -625,6 +629,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
+    rainbow (3.0.0)
     rake (13.0.1)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
@@ -692,6 +697,7 @@ GEM
     redlock (1.2.0)
       redis (>= 3.0.0, < 5.0)
     ref (2.0.0)
+    regexp_parser (1.7.1)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
@@ -702,6 +708,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     retriable (3.1.2)
+    rexml (3.2.4)
     rsolr (2.3.0)
       builder (>= 2.1.2)
       faraday (>= 0.9.0)
@@ -722,6 +729,17 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.9.3)
+    rubocop (0.90.0)
+      parallel (~> 1.10)
+      parser (>= 2.7.1.1)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.7)
+      rexml
+      rubocop-ast (>= 0.3.0, < 1.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (0.3.0)
+      parser (>= 2.7.1.4)
     ruby-box (1.15.0)
       addressable
       json
@@ -837,6 +855,7 @@ GEM
     uber (0.1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.7.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (3.7.0)
@@ -886,6 +905,7 @@ DEPENDENCIES
   redis (~> 3.0)
   rsolr (>= 1.0)
   rspec-rails
+  rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
   sidekiq
