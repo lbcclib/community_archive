@@ -1,6 +1,8 @@
 User-agent: AhrefsBot
-Disallow:/
+Disallow: /
 User-agent: Barkrowler
-Crawl-delay: 10
+Disallow: /
+User-agent: PetalBot
+Disallow: /
 User-agent: SemrushBot
-Crawl-delay: 10
+Disallow: /
