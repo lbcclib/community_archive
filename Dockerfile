@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
 # Install FITS
-RUN apt-get update && apt-get install -y default-jre
+RUN apt-get update && apt-get install -y default-jre libreoffice
 RUN mkdir -p /opt/fits && \
     curl -fSL -o /opt/fits/fits-latest.zip https://projects.iq.harvard.edu/files/fits/files/fits-1.3.0.zip && \
     cd /opt/fits && unzip fits-latest.zip && chmod +X /opt/fits/fits.sh
