@@ -102,9 +102,9 @@
         <str name="qf">
           id
           active_fedora_model_ssi
-          title_tesim
-          author_tesim
-          subject_tesim
+          title_tesim^20
+          author_tesim^12
+          subject_tesim^15
         </str>
         <str name="pf">
           all_text_timv^10

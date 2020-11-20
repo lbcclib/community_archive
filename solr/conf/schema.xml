@@ -142,6 +142,8 @@
         <filter class="solr.PorterStemFilterFactory"/>
         -->
         <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.FlattenGraphFilterFactory"/>
       </analyzer>
     </fieldType>
         

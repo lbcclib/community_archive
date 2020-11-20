@@ -1,0 +1,78 @@
+AA, Applied Arts
+AG, AG8, Agriculture
+AH5, Allied Health
+AH, Allied Health
+ANS, Animal Science
+ANTH, Anthropology
+APR, Apprenticeship
+AREC, Agriculture Business Mgmt, Agriculture Business Management
+AT, Animal Technology
+AU3, Automotive Technology
+BA, Business
+BI, Biology
+CA8, Culinary Arts Hosp Services, Culinary Arts Hospitality Services
+CA, Culinary Arts Transfer
+CAT, Computed Tomography
+CE6, Civil Engineering Vocational
+CEM, Civil Engineering
+CH, Chemistry
+CIS, Computer Information Systems
+CJ, Criminal Justice
+CMA, Medical Assistant
+COMM, Communication
+CRS, Coding Reimb Specialist, Coding Reimbursement Specialist
+CS, Computer Science
+CSS, Crop & Soil Science
+CST, Construction Equipment
+DA5, Dental Assistant
+DI, Diagnostic Imaging
+EC, Economics
+ED, ED7, Education
+EG4, Engineering Graphics
+ENG, English
+ENGR, Engineering
+ESR, Environmental Studies
+FW, Fisheries and Wildlife
+GEOG, Geography
+G, Geology
+GS, General Science
+HDFS, Human Dev Family Studies, Human Development Family Studies
+HD, Human Development
+HE, Health
+HS, Human Services
+HST, History
+HUM, Humanities
+HVE, Heavy Equipment Diesel
+IN4, Industrial Technology
+JN, Journalism
+MA3, Manufacturing Technology
+MP, Music Performance
+MT3, Mechatronics
+MTH, Mathematics
+MUS, Music
+NDT, Nondestructive Testing Evaluation
+NFM, Nutrition and Foods Management
+NUR, Nursing
+NUTR, Nutrition
+OA, Office Administration
+OTA, Occupational Therapy Assistant
+PBM, Practical Business Management
+PBT, Phlebotomy
+PE, Physical Education
+PFW, Pipe Fitting & Welding
+PHL, Philosophy
+PH, Physics
+PSG, Polysomnographic Technology, sleep Technology
+PS, Political Science
+PSY, Psychology
+QS, Queer Studies
+R, Religion
+SOC, Sociology
+SPN, Spanish
+ST, Surgical Technology
+TA, Theatre
+WD4, Welding
+WE, WE1, Work Experience
+WR, Writing
+WS, Women's Studies
+WW6, Water Wastewater
