@@ -12,7 +12,7 @@ LBCC's institutional repository
 
 To make life easier, after you create an account, you'll also want to:
 
-    docker-compose exec db psql -U commarch -W commarch -c 'UPDATE users SET admin=true'
+    docker-compose exec db psql -U commarch -W commarch -c "UPDATE users SET admin=true"
 
 ## Deploy
     cap (beta|production) deploy
