@@ -20,7 +20,7 @@ services:
       - "3000:3000"
 
   db:
-    image: postgres:12
+    image: postgres:12-alpine
     environment:
       - POSTGRES_DB=commarch
       - POSTGRES_USER=commarch
