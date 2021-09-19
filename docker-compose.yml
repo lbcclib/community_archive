@@ -4,7 +4,7 @@ services:
   app:
     build: .
     volumes:
-      - .:/var/www/hyrax/
+      - .:/samvera/hyrax-webapp
     environment:
       - POSTGRES_HOST=db
       - POSTGRES_DB=commarch
