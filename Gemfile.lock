@@ -642,7 +642,8 @@ GEM
     posix-spawn (0.3.15)
     power_converter (0.1.2)
     public_suffix (4.0.6)
-    puma (3.12.6)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     qa (5.6.0)
       activerecord-import
       deprecation
@@ -992,7 +993,7 @@ DEPENDENCIES
   loofah (~> 2.3.1)
   mini_racer
   pg (~> 1.2)
-  puma (~> 3.7)
+  puma (~> 4.3)
   rack (>= 2.0.6)
   rails (= 5.2.6)
   redis (~> 3.0)
