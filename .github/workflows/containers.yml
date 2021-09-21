@@ -1,0 +1,18 @@
+name: Containers
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build app image
+        run: |
+          docker build -f .docker/Dockerfile.app -t ${{ github.sha }}
+
+      - name: Build worker image
+        run: |
+          docker build -f .docker/Dockerfile.worker -t ${{ github.sha }}
