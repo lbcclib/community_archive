@@ -2,22 +2,34 @@ version: '3'
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.app
     volumes:
-      - .:/samvera/hyrax-webapp
-    environment:
-      - POSTGRES_HOST=db
-      - POSTGRES_DB=commarch
-      - POSTGRES_USER=commarch
-      - POSTGRES_PASSWORD=commarch
-      - DEV_REDIS_HOST=redis
-      - REDIS_URL=redis://redis:6379/1
+      - .:/app/samvera/hyrax-webapp:cached
+      - hyrax-derivatives:/app/samvera/hyrax-webapp/derivatives
+      - hyrax-uploads:/app/samvera/hyrax-webapp/uploads
+      - rails-public:/app/samvera/hyrax-webapp/public
+      - rails-tmp:/app/samvera/hyrax-webapp/tmp
     depends_on:
       - db
       - solr
       - fcrepo
     ports:
       - "3000:3000"
+
+  worker:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.worker
+    volumes:
+      - .:/app/samvera/hyrax-webapp:cached
+      - hyrax-derivatives:/app/samvera/hyrax-webapp/derivatives
+      - hyrax-uploads:/app/samvera/hyrax-webapp/uploads
+      - worker-public:/app/samvera/hyrax-webapp/public
+      - worker-tmp:/app/samvera/hyrax-webapp/tmp
+    depends_on:
+      - redis
 
   db:
     image: postgres:12-alpine
@@ -42,9 +54,14 @@ services:
       - "8983:8983"
 
   fcrepo:
-    image: ualbertalib/docker-fcrepo4:4.7
-    environment:
-      - JAVA_OPTS=${JAVA_OPTS} -Dfcrepo.modeshape.configuration="classpath:/config/file-simple/repository.json" -Dfcrepo.object.directory="/data/objects" -Dfcrepo.binary.directory="/data/binaries"
+    image: ghcr.io/samvera/fcrepo4:4.7.5
     ports:
-      - "8080:8080"
+      - 8080:8080
 
+volumes:
+  hyrax-derivatives:
+  hyrax-uploads:
+  rails-public:
+  rails-tmp:
+  worker-public:
+  worker-tmp:

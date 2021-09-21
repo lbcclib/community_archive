@@ -9,8 +9,6 @@ Hyrax.config do |config|
   config.register_curation_concern :open_educational_resource
   # Injected via `rails g hyrax:work Image`
   config.register_curation_concern :image
-  # Injected via `rails g hyrax:work Video`
-  config.register_curation_concern :video
   # Register roles that are expected by your implementation.
   # @see Hyrax::RoleRegistry for additional details.
   # @note there are magical roles as defined in Hyrax::RoleRegistry::MAGIC_ROLES
@@ -137,12 +135,12 @@ Hyrax.config do |config|
 
   # Temporary paths to hold uploads before they are ingested into FCrepo
   # These must be lambdas that return a Pathname. Can be configured separately
-  #  config.upload_path = ->() { Rails.root + 'tmp' + 'uploads' }
+  config.upload_path = ->() { ENV['UPLOADS_PATH'] }
   #  config.cache_path = ->() { Rails.root + 'tmp' + 'uploads' + 'cache' }
 
   # Location on local file system where derivatives will be stored
   # If you use a multi-server architecture, this MUST be a shared volume
-  config.derivatives_path = Rails.root.join('public', 'system', 'derivatives')
+  config.derivatives_path = ENV['DERIVATIVES_PATH']
 
   # Should schema.org microdata be displayed?
   # config.display_microdata = true
