@@ -9,10 +9,26 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build app image
-        run: |
-          docker build . -f .docker/Dockerfile.app -t ${{ github.sha }}
-
-      - name: Build worker image
-        run: |
-          docker build . -f .docker/Dockerfile.worker -t ${{ github.sha }}
+      -
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      -
+        name: Build and push app
+        id: app_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: lbcclib/community_archive_app:${{ github.sha }}
+          file: .docker/Dockerfile.app
+      -
+        name: Build and push worker
+        id: worker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: lbcclib/community_archive_worker:${{ github.sha }}
+          file: .docker/Dockerfile.worker
