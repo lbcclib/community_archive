@@ -14,7 +14,7 @@ EXPERIMENTAL_OCI = { 'HELM_EXPERIMENTAL_OCI' => '1' }.freeze
 # RELEASE (defaults to staging release, but you may wish to upgrade the production release instead)
 
 def run_helm_command(*args)
-  puts "Running helm #{args.join(' ')}"
+  #puts "Running helm #{args.join(' ')}"
   system EXPERIMENTAL_OCI, 'helm', *args
 end
 
