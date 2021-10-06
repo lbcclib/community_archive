@@ -25,7 +25,7 @@ jobs:
       id: install
     - name: Run deploy script
       env:
-        IMAGE_TAG=${{ gitub.sha }}
+        IMAGE_TAG=${{ github.sha }}
         POSTGRESQL_PASSWORD=${{ secrets.STAGING_POSTGRESQL_PASSWORD }}
         REDIS_PASSWORD=${{ secrets.STAGING_REDIS_PASSWORD }}
         SOLR_PASSWORD=${{ secrets.STAGING_SOLR_PASSWORD }}
