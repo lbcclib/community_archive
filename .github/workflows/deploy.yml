@@ -21,7 +21,7 @@ jobs:
     - name: Log in to AKS
       run: az aks get-credentials --name ${{ secrets.K8S_CLUSTER_NAME }} --resource-group ${{ secrets.K8S_CLUSTER_RG }}
     - uses: azure/setup-helm@v1
-      with: 3.6.3
+      with: v3.6.3
     - name: Run deploy script
       env:
         IMAGE_TAG: ${{ github.sha }}
