@@ -14,7 +14,6 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
     - uses: azure/setup-kubectl@v1
-      id: install
     - name: Login via Az module
       uses: azure/login@v1
       with:
@@ -22,7 +21,6 @@ jobs:
     - name: Log in to AKS
       run: az aks get-credentials --name $K8S_CLUSTER_NAME --resource-group $K8S_CLUSTER_RG
     - uses: azure/setup-helm@v1
-      id: install
     - name: Run deploy script
       env:
         IMAGE_TAG=${{ github.sha }}
