@@ -1,0 +1,13 @@
+brandingVolume:
+  storageClass: azurefile
+derivativesVolume:
+  storageClass: azurefile
+image:
+  repository: ghcr.io/lbcclib/community_archive/app
+service:
+  type: LoadBalancer
+uploadsVolume:
+  storageClass: azurefile
+worker:
+  image:
+    repository: ghcr.io/lbcclib/community_archive/worker
