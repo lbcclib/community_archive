@@ -19,7 +19,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Log in to AKS
-      run: az aks get-credentials --name $K8S_CLUSTER_NAME --resource-group $K8S_CLUSTER_RG
+      run: az aks get-credentials --name ${{ secrets.K8S_CLUSTER_NAME }} --resource-group ${{ secrets.K8S_CLUSTER_RG }}
     - uses: azure/setup-helm@v1
     - name: Run deploy script
       env:
