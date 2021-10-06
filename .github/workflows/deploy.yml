@@ -1,0 +1,32 @@
+name: deploy
+
+on:
+  workflow_run:
+    workflows: ["Containers"]
+    types:
+      - completed
+
+jobs:
+  deploy-staging:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+    - uses: azure/setup-kubectl@v1
+      id: install
+    - name: Login via Az module
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Log in to AKS
+      run: az aks get-credentials --name $K8S_CLUSTER_NAME --resource-group $K8S_CLUSTER_RG
+    - uses: azure/setup-helm@v1
+      id: install
+    - name: Run deploy script
+      env:
+        IMAGE_TAG=${{ gitub.sha }}
+        POSTGRESQL_PASSWORD=${{ secrets.STAGING_POSTGRESQL_PASSWORD }}
+        REDIS_PASSWORD=${{ secrets.STAGING_REDIS_PASSWORD }}
+        SOLR_PASSWORD=${{ secrets.STAGING_SOLR_PASSWORD }}
+      run: ruby .helm/deploy.rb
