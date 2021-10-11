@@ -7,7 +7,10 @@ image:
 service:
   type: LoadBalancer
 solr:
+  cloudEnabled: false
   replicaCount: 1
+  zookeeper:
+    enabled: false
 uploadsVolume:
   storageClass: azurefile
 worker:
