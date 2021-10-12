@@ -24,9 +24,4 @@ jobs:
       with:
         version: v3.6.3
     - name: Run deploy script
-      env:
-        IMAGE_TAG: ${{ github.sha }}
-        POSTGRESQL_PASSWORD: ${{ secrets.STAGING_POSTGRESQL_PASSWORD }}
-        REDIS_PASSWORD: ${{ secrets.STAGING_REDIS_PASSWORD }}
-        SOLR_PASSWORD: ${{ secrets.STAGING_SOLR_PASSWORD }}
-      run: ruby .helm/deploy.rb
+      run: ruby .helm/deploy.rb upgrade ${{ github.sha }}

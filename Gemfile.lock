@@ -1007,6 +1007,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen
   syslogger!
+  thor
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

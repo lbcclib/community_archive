@@ -4,12 +4,16 @@ derivativesVolume:
   storageClass: azurefile
 image:
   repository: ghcr.io/lbcclib/community_archive/app
+redis:
+  cluster:
+    enabled: false
+    slaveCount: 0
+  replica:
+    replicaCount: 0
 service:
   type: LoadBalancer
 solr:
-  cloudEnabled: false
-  collectionReplicas: 1
-  replicaCount: 1
+  cloudEnabled: true
   zookeeper:
     replicaCount: 1
 uploadsVolume:
