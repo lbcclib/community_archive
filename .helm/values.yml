@@ -8,6 +8,7 @@ service:
   type: LoadBalancer
 solr:
   cloudEnabled: false
+  collectionReplicas: 1
   replicaCount: 1
   zookeeper:
     enabled: false
