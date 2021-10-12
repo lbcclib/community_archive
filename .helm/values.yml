@@ -11,7 +11,7 @@ solr:
   collectionReplicas: 1
   replicaCount: 1
   zookeeper:
-    enabled: false
+    replicaCount: 1
 uploadsVolume:
   storageClass: azurefile
 worker:
