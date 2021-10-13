@@ -28,4 +28,4 @@ jobs:
       with:
         version: v3.6.3
     - name: Run deploy script
-      run: ruby .helm/deploy.rb upgrade ${{ github.sha }}
+      run: bundle exec ruby .helm/deploy.rb upgrade ${{ github.sha }}
