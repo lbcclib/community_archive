@@ -4,6 +4,8 @@ derivativesVolume:
   storageClass: azurefile
 image:
   repository: ghcr.io/lbcclib/community_archive/app
+livenessProbe:
+  initialDelaySeconds: 30
 redis:
   cluster:
     enabled: false
