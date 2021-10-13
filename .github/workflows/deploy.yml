@@ -10,9 +10,13 @@ jobs:
   deploy-staging:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITH: deployment_script
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
     - uses: azure/setup-kubectl@v1
     - name: Login via Az module
       uses: azure/login@v1

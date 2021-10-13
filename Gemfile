@@ -90,4 +90,7 @@ gem "bootstrap-sass", "~> 3.4.1"
 gem 'blacklight_oai_provider'
 
 gem 'rubocop', require: false
-gem 'thor'
+
+group :deployment_script do
+  gem 'thor'
+end
