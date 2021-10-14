@@ -13,6 +13,7 @@ class DeployToKubernetes < Thor
   def install(commarch_version, release_name = 'staging', hyrax_helm_chart_version = DEFAULT_HYRAX_HELM_CHART_VERSION)
     pull_and_update_charts hyrax_helm_chart_version
     postgresql_password = new_password
+    secrets_from_user = ask_user_for_secrets ['smtp.address', 'smtp.port', 'smtp.user', 'smtp.pass']
     run_helm_command 'install', '--namespace=communityarchive', "--values=#{__dir__}/values.yml",
                      "--set=image.tag=#{commarch_version}",
                      "--set=worker.image.tag=#{commarch_version}",
@@ -20,6 +21,7 @@ class DeployToKubernetes < Thor
                      "--set=global.postgresql.postgresqlPassword=#{postgresql_password}",
                      "--set=redis.password=#{new_password}",
                      "--set=solr.authentication.adminPassword=#{new_password}",
+                     *secrets_to_set_commands(secrets_from_user),
                      release_name, 'hyrax'
   end
 
@@ -53,6 +55,13 @@ class DeployToKubernetes < Thor
 
   private
 
+  def ask_user_for_secrets(keys)
+    keys.map do |key|
+      { name: key,
+        value: ask("\nPlease enter a value for #{key}", echo: false) }
+    end
+  end
+
   def new_password
     SecureRandom.hex(42)
   end
@@ -60,6 +69,13 @@ class DeployToKubernetes < Thor
   def run_helm_command(*args)
     # puts "Running helm #{args.join(' ')}"
     system EXPERIMENTAL_OCI, 'helm', *args
+  end
+
+  def secrets_to_set_commands(secrets)
+    secrets.map.with_index do |secret, index|
+      "--set=\"extraEnvVars[#{index}].name=#{secret[:name]}\" "\
+      "--set=\"extraEnvVars[#{index}].value=#{secret[:value]}\""
+    end
   end
 end
 
