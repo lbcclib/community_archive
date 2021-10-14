@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DEFAULT_HYRAX_HELM_CHART_VERSION = '0.22.0'
+DEFAULT_HYRAX_HELM_CHART_VERSION = '1.0.0'
 EXPERIMENTAL_OCI = { 'HELM_EXPERIMENTAL_OCI' => '1' }.freeze
 
 require 'securerandom'
