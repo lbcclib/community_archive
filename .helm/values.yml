@@ -14,6 +14,7 @@ redis:
     replicaCount: 0
 service:
   type: LoadBalancer
+skipHyraxEngineSeed: true
 solr:
   cloudEnabled: true
   zookeeper:
@@ -23,3 +24,4 @@ uploadsVolume:
 worker:
   image:
     repository: ghcr.io/lbcclib/community_archive/worker
+  replicaCount: 1
