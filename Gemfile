@@ -93,3 +93,6 @@ gem 'rubocop', require: false
 
 gem 'dry-monads', '1.3.5' # pinning because later versions require ruby upgrade
 gem 'dry-core', '0.5.0' # ditto
+
+gem 'bulkrax', '1.0.0'
+gem 'willow_sword', github: 'notch8/willow_sword'
