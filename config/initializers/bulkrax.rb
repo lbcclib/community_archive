@@ -52,6 +52,43 @@ Bulkrax.setup do |config|
   #   #   config.field_mappings["Bulkrax::CsvParser"]["source_id"] = { from: ["old_source_id"], source_identifier: true  }
   # If you want Bulkrax to fill in source_identifiers for you, see below
 
+  %w[
+    abstract
+    accessibility_statement
+    access_right
+    alternative_title
+    based_near
+    contributor
+    creator
+    crn
+    date_created
+    description
+    duration_in_minutes
+    edition
+    identifier
+    keyword
+    language
+    license
+    material_type
+    media_format
+    publisher
+    related_url
+    resource_type
+    rights_notes
+    rights_statement
+    source
+    subject
+    sublevel
+    tech_requirement
+    title
+    volume
+    year_course_taught
+  ].each do |field|
+    config.field_mappings['Bulkrax::CsvParser'][field] = { from: [field] }
+  end
+
+  config.field_mappings['Bulkrax::CsvParser']['id'] = { from: ['bulkrax_identifier'], source_identifier: true }
+
   # To duplicate a set of mappings from one parser to another
   #   config.field_mappings["Bulkrax::OaiOmekaParser"] = {}
   #   config.field_mappings["Bulkrax::OaiDcParser"].each {|key,value| config.field_mappings["Bulkrax::OaiOmekaParser"][key] = value }
