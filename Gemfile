@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hyrax', '~> 3.0'
+gem 'hyrax', '< 3.1'
 gem 'linkeddata', '> 3.0'
 #gem 'clamav'
 #gem 'hydra-derivatives', '~> 3.3'
@@ -90,3 +90,6 @@ gem "bootstrap-sass", "~> 3.4.1"
 gem 'blacklight_oai_provider'
 
 gem 'rubocop', require: false
+
+gem 'dry-monads', '1.3.5' # pinning because later versions require ruby upgrade
+gem 'dry-core', '0.5.0' # ditto
