@@ -2,6 +2,11 @@ brandingVolume:
   storageClass: azurefile
 derivativesVolume:
   storageClass: azurefile
+fcrepo:
+  storage:
+    enabled: true
+    size: 200Gi
+    className: azurefile
 image:
   repository: ghcr.io/lbcclib/community_archive/app
 livenessProbe:
