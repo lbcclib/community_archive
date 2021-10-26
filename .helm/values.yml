@@ -2,6 +2,9 @@ brandingVolume:
   storageClass: azurefile
 derivativesVolume:
   storageClass: azurefile
+extraEnvFrom:
+  - secretRef:
+      name: prod-secrets
 fcrepo:
   storage:
     enabled: true

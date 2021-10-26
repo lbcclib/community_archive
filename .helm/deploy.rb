@@ -12,9 +12,8 @@ class DeployToKubernetes < Thor
        'install a new helm release (such as a new staging or testing environment)'
   def install(commarch_version, release_name = 'staging', hyrax_helm_chart_version = DEFAULT_HYRAX_HELM_CHART_VERSION)
     pull_and_update_charts hyrax_helm_chart_version
-    secrets_from_user = ask_user_for_secrets ['smtp.address', 'smtp.port', 'smtp.user', 'smtp.pass']
+    create_kubernetes_secret
     run_helm_command 'install', *basic_install_flags(release_name, commarch_version),
-                     *secrets_to_set_commands(secrets_from_user),
                      release_name, 'hyrax'
   end
 
@@ -39,16 +38,20 @@ class DeployToKubernetes < Thor
   def delete(release_name = 'staging')
     puts "\nWARNING: These commands will take the site down and delete all data!"
     puts "\nhelm uninstall -n communityarchive #{release_name}"
-    puts "kubectl delete pvc,pv,pod,svc --selector=app.kubernetes.io/instance=#{release_name} --namespace communityarchive"
+    puts "kubectl delete pvc,pv,pod,svc --selector=app.kubernetes.io/instance=#{release_name}"\
+         ' --namespace communityarchive'
   end
 
   private
 
-  def ask_user_for_secrets(keys)
-    keys.map do |key|
-      { name: key,
-        value: ask("\nPlease enter a value for #{key}", echo: false) }
-    end
+  def create_kubernetes_secret
+    system 'kubectl create secret generic prod-secrets --namespace communityarchive'\
+           " --from-env-file=#{__dir__}/../.env.production"
+  end
+
+  def update_kubernetes_secret
+    system 'kubectl delete secret prod-secrets --namespace communityarchive --ignore-not-found'
+    create_kubernetes_secret
   end
 
   def basic_install_flags(release_name, commarch_version)
@@ -84,13 +87,6 @@ class DeployToKubernetes < Thor
   def run_helm_command(*args)
     # puts "Running helm #{args.join(' ')}"
     system EXPERIMENTAL_OCI, 'helm', *args
-  end
-
-  def secrets_to_set_commands(secrets)
-    secrets.map.with_index do |secret, index|
-      "--set=\"extraEnvVars[#{index}].name=#{secret[:name]}\" "\
-      "--set=\"extraEnvVars[#{index}].value=#{secret[:value]}\""
-    end
   end
 
   def values_files(release_name)
