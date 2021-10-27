@@ -35,5 +35,9 @@ jobs:
         echo SMTP_USER=${{ secrets.SMTP_USER }} >> .env
         echo GOOGLE_DRIVE_API_CLIENT_ID=${{ secrets.GOOGLE_DRIVE_API_CLIENT_ID }} >> .env
         echo GOOGLE_DRIVE_API_CLIENT_SECRET=${{ secrets.GOOGLE_DRIVE_API_CLIENT_SECRET }} >> .env
+    - name: Diagnostics
+      run: |
+        pwd
+        ls -al
     - name: Run deploy script
       run: bundle exec ruby .helm/deploy.rb upgrade ${{ github.sha }}
