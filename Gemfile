@@ -94,3 +94,6 @@ gem 'rubocop', require: false
 group :deployment_script do
   gem 'thor'
 end
+
+gem 'bulkrax', '~> 1.0'
+gem 'willow_sword', github: 'notch8/willow_sword'
