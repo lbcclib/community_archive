@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: .docker/Dockerfile.app
+      args:
+        - BUNDLE_WITHOUT=production
     volumes:
       - .:/app/samvera/hyrax-webapp:cached
       - hyrax-derivatives:/app/samvera/hyrax-webapp/derivatives
@@ -22,6 +24,8 @@ services:
     build:
       context: .
       dockerfile: .docker/Dockerfile.worker
+      args:
+        - BUNDLE_WITHOUT=production
     volumes:
       - .:/app/samvera/hyrax-webapp:cached
       - hyrax-derivatives:/app/samvera/hyrax-webapp/derivatives
