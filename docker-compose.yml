@@ -17,6 +17,11 @@ services:
       - db
       - solr
       - fcrepo
+    environment:
+      - FCREPO_HOST=fcrepo
+      - FCREPO_PORT=8080
+      - FCREPO_BASE_PATH=''
+      - SOLR_URL=http://solr:8983/solr/hydra-development
     ports:
       - "3000:3000"
 
@@ -34,6 +39,11 @@ services:
       - worker-tmp:/app/samvera/hyrax-webapp/tmp
     depends_on:
       - redis
+    environment:
+      - FCREPO_HOST=fcrepo
+      - FCREPO_PORT=8080
+      - FCREPO_BASE_PATH=''
+      - SOLR_URL=http://solr:8983/solr/hydra-development
 
   db:
     image: postgres:12-alpine
