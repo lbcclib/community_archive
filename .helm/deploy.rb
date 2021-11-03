@@ -72,12 +72,10 @@ class DeployToKubernetes < Thor
   end
 
   def basic_flags_for_install_and_upgrade(release_name, commarch_version)
-    [
-      '--namespace=communityarchive',
-      values_files(release_name),
-      "--set=image.tag=#{commarch_version}",
-      "--set=worker.image.tag=#{commarch_version}"
-    ]
+    flags = values_files(release_name)
+    flags << '--namespace=communityarchive'
+    flags << "--set=image.tag=#{commarch_version}"
+    flags << "--set=worker.image.tag=#{commarch_version}"
   end
 
   def new_password
@@ -90,7 +88,7 @@ class DeployToKubernetes < Thor
   end
 
   def values_files(release_name)
-    options = "--values=#{values_file_path} "
+    options = ["--values=#{values_file_path}"]
     options << "--values=#{values_file_path(release_name)}" if File.exist? values_file_path(release_name)
     options
   end
