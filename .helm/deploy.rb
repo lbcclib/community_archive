@@ -3,6 +3,7 @@
 DEFAULT_HYRAX_HELM_CHART_VERSION = '1.0.0'
 EXPERIMENTAL_OCI = { 'HELM_EXPERIMENTAL_OCI' => '1' }.freeze
 
+require 'pathname'
 require 'securerandom'
 require 'thor'
 
@@ -83,7 +84,7 @@ class DeployToKubernetes < Thor
   end
 
   def run_helm_command(*args)
-    # puts "Running helm #{args.join(' ')}"
+    #puts "Running helm #{args.join(' ')}"
     system EXPERIMENTAL_OCI, 'helm', *args
   end
 
@@ -94,7 +95,7 @@ class DeployToKubernetes < Thor
   end
 
   def values_file_path(name = 'values')
-    "#{__dir__}/#{name}.yml"
+    Pathname.new("#{__dir__}/#{name}.yml").relative_path_from Dir.pwd
   end
 end
 
