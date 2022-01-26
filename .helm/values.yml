@@ -22,7 +22,7 @@ redis:
     replicaCount: 0
 service:
   type: LoadBalancer
-skipHyraxEngineSeed: true
+skipDbMigrateSeed: true
 solr:
   cloudEnabled: true
   zookeeper:

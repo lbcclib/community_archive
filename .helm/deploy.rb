@@ -62,14 +62,12 @@ class DeployToKubernetes < Thor
     flags << "--set=global.postgresql.postgresqlPassword=#{postgresql_password}"
     flags << "--set=redis.password=#{new_password}"
     flags << "--set=solr.authentication.adminPassword=#{new_password}"
-    flags << '--set=skipDbMigrateSeed=true' # Don't install DB, so that it can be created with pg_restore instead
   end
 
   def basic_upgrade_flags(release_name, commarch_version)
     flags = basic_flags_for_install_and_upgrade(release_name, commarch_version)
     flags << '--atomic'
     flags << '--reuse-values'
-    flags << '--set=skipDbMigrateSeed=false' # Run db migrations on upgrade
   end
 
   def basic_flags_for_install_and_upgrade(release_name, commarch_version)
