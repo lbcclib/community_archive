@@ -27,3 +27,5 @@ production:
     - archivist1@example.com
   admin:
     - miyagib@linnbenton.edu
+    - hiness@linnbenton.edu
+    - gallags@linnbenton.edu
