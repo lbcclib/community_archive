@@ -2,6 +2,7 @@ version: '3'
 
 services:
   app:
+    # command: sh -l -c "bundle && bundle exec puma -v -b tcp://0.0.0.0:3000"
     build:
       context: .
       dockerfile: .docker/Dockerfile.app
