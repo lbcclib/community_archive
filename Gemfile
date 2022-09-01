@@ -25,7 +25,6 @@ gem 'mini_racer', platforms: :ruby
 #gem 'nokogiri', '~> 1.8.1'
 
 #gem 'active-fedora', '11.5.2'
-gem 'devise_cas_authenticatable'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -76,6 +75,8 @@ gem 'rsolr', '>= 1.0'
 gem 'jquery-rails'
 gem 'devise', '~> 4.7.1'
 gem 'devise-guests', '~> 0.6'
+gem 'omniauth-saml', '~> 1.10.3'
+
 group :development, :test do
   gem 'fcrepo_wrapper'
   gem 'rspec-rails'

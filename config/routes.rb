@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     concerns :searchable
   end
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   mount Qa::Engine => '/authorities'
   mount Hyrax::Engine, at: '/'
   resources :welcome, only: 'index'

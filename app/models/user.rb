@@ -12,9 +12,9 @@ class User < ApplicationRecord
   include Blacklight::User
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  if Rails.env.production?
-    devise :cas_authenticatable,
-           :recoverable, :rememberable, :trackable
+  if ENV.fetch('SSO_ENABLED', false)
+    devise :omniauthable, :recoverable, :rememberable,
+          :trackable, omniauth_providers: [:saml]
   else
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :trackable
@@ -27,14 +27,20 @@ class User < ApplicationRecord
     email
   end
 
-  def cas_extra_attributes=(extra_attributes)
-    extra_attributes.each do |name, value|
-      case name.to_sym
-      when :department
-        self.department = value
-      when :email
-        self.email = value
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0, 20]
+      user.name = auth.info.name   # assuming the user model has a name
+    end
+  end
+
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session["devise.saml_data"] && session["devise.saml_data"]["extra"]["raw_info"]
+        user.email = data["email"] if user.email.blank?
       end
     end
   end
+
 end
