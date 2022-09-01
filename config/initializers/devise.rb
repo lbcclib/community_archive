@@ -8,11 +8,6 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   config.secret_key = ENV.fetch('DEVISE_SECRET_KEY', 'qqnYEzMpz5OOfUgNmfGWQ7BJnj8A8WH0yztDvJ4oAuV6r8lWrkdAMhksSpSa')
 
-  config.cas_base_url = 'https://login.linnbenton.edu/idp/profile/cas'
-  config.cas_enable_single_sign_out = true
-  config.cas_user_identifier = 'email'
-  config.cas_username_column = "email"
-
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -256,6 +251,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  idp_metadata = OneLogin::RubySaml::IdpMetadataParser.new.parse_to_hash(File.read(Rails.root.join('config/sso_metadata.xml')))
+  config.omniauth :saml, idp_metadata.merge(sp_entity_id: 'https://libarchive.linnbenton.edu', assertion_consumer_service_url: 'https://libarchive.linnbenton.edu/user/auth/saml/callback')
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
