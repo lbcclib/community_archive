@@ -622,7 +622,7 @@ GEM
     mini_portile2 (2.8.0)
     mini_racer (0.4.0)
       libv8-node (~> 15.14.0.0)
-    minitest (5.16.3)
+    minitest (5.14.4)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
@@ -1027,6 +1027,7 @@ DEPENDENCIES
   lograge (~> 0.3.1)
   loofah (~> 2.3.1)
   mini_racer
+  minitest (= 5.14.4)
   omniauth-saml (~> 1.10.3)
   pg (~> 1.2)
   puma (< 6)

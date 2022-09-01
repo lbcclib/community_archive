@@ -98,3 +98,5 @@ end
 
 gem 'bulkrax', '~> 1.0'
 gem 'willow_sword', github: 'notch8/willow_sword'
+
+gem 'minitest', '5.14.4'
