@@ -23,10 +23,10 @@ set :repo_url, "https://github.com/lbcclib/community_archive.git"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, ".env", ".env.beta", ".env.production" 
+append :linked_files, ".env", ".env.beta", ".env.production"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "public/assets", "public/system", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", ".bundle"
+append :linked_dirs, "log", "public/assets", "public/system", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", ".bundle", "tmp/uploads", "tmp/imports", "tmp/exports"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -39,4 +39,3 @@ append :linked_dirs, "log", "public/assets", "public/system", "tmp/pids", "tmp/c
 
 # Run bundle exec before rack
 append :bundle_bins, 'rack'
-

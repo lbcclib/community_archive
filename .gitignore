@@ -26,3 +26,4 @@ public/system
 .env.production*
 .env.local
 .env
+*~undo-tree~

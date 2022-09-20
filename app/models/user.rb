@@ -13,7 +13,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   if ENV.fetch('SSO_ENABLED', false)
-    devise :omniauthable, :recoverable, :rememberable,
+    devise :database_authenticatable, :omniauthable, :recoverable, :rememberable,
           :trackable, omniauth_providers: [:saml]
   else
     devise :database_authenticatable, :registerable,
@@ -28,10 +28,10 @@ class User < ApplicationRecord
   end
 
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.email = auth.info.email
+    where(provider: auth.provider, uid: auth.uid).first || where(email: auth.uid).first_or_create do |user|
+      user.email = auth.uid
       user.password = Devise.friendly_token[0, 20]
-      user.name = auth.info.name   # assuming the user model has a name
+      user.display_name = auth.info.display_name   # assuming the user model has a name
     end
   end
 
@@ -42,5 +42,4 @@ class User < ApplicationRecord
       end
     end
   end
-
 end

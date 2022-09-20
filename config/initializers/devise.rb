@@ -251,8 +251,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  idp_metadata = OneLogin::RubySaml::IdpMetadataParser.new.parse_to_hash(File.read(Rails.root.join('config/sso_metadata.xml')))
-  config.omniauth :saml, idp_metadata.merge(sp_entity_id: 'https://libarchive.linnbenton.edu', assertion_consumer_service_url: 'https://libarchive.linnbenton.edu/user/auth/saml/callback')
+  IDP_METADATA = OneLogin::RubySaml::IdpMetadataParser.new.parse_to_hash(File.read(Rails.root.join('config/sso_metadata.xml')))
+  IDP_METADATA.merge!(sp_entity_id: 'https://libarchive.linnbenton.edu', assertion_consumer_service_url: 'https://libarchive.linnbenton.edu/users/auth/saml/callback')
+  config.omniauth :saml, IDP_METADATA
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
